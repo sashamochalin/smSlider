@@ -1,61 +1,97 @@
 (function( $ ){
   $.fn.smSlider = function(options) {
   var defaults = {
-        start        : 0,
-        activeClass  : 'active',
-        autoArr      : true,
-        innerBlock   : 'sm_slider-inner',
-        prev         : 'smprev',
-        next         : 'smnext',
-        children     : 'sm_slide',
-        pagination   : true,
-        subMenu      : false,
-        subMenuClass : 'sm_submenu-item',
-        autoPlay     : false,
-        delay        : 3000,
-        hoverPause   : true,
-        easing       : 'swing',
-        duration     : 800,
-        keyboard     : true,
-        flexible     : false              
+        start             : 0,
+        transition        : 'animate',
+        activeClass       : 'active',
+        autoArr           : true,
+        innerBlock        : 'sm_slider-inner',
+        prev              : 'sm_prev',
+        next              : 'sm_next',
+        children          : 'sm_slide',
+        pagination        : true,
+        typeCtrl          : 'dots',
+        subMenu           : false,
+        subMenuClass      : 'sm_submenu-item',
+        autoPlay          : false,
+        delay             : 5000,
+        hoverPause        : true,
+        easing            : 'swing',
+        duration          : 500,
+        flexible          : false,
+        animationStart    : function(){},
+        animationComplete : function(){}        
   };
   var options = $.extend(defaults, options);
-  return this.each(function() {  	
+  return this.each(function() {
+    var clickable = true;
     var slideMove = function (toIndex, direction){
-        var moveNext = smSlideWidth;
-        var movePrev = -1*moveNext;
-
-        if (direction == 'next') {
-            currPos = movePrev;
-            nextPos = moveNext; 
-        } else {
-            currPos = moveNext;
-            nextPos = movePrev;
-        }
-
-        $smSliderInner.children('.'+options.children+'.'+options.activeClass).stop().animate({
-            'left' : currPos
-        }, {
-            duration : options.duration,
-            easing : options.easing,
-            complete: function(){
-                $(this).removeClass(options.activeClass);
+        if(clickable) {
+            clickable = false;
+            var moveNext = smSlideWidth;
+            var movePrev = -1*moveNext;
+            if (direction == 'next') {
+                currPos = movePrev;
+                nextPos = moveNext; 
+            } else {
+                currPos = moveNext;
+                nextPos = movePrev;
             }
-        });
-        $smSlide.eq(toIndex).css('left', nextPos).addClass(options.activeClass).stop().animate({
-            'left' : 0
-        }, {
-            duration: options.duration,
-            easing: options.easing
-        });
-        if (options.pagination) {
-			$smNavItem.removeClass(options.activeClass);
-			$smNavItem.eq(toIndex).addClass(options.activeClass);
-		}
-		if (options.subMenu) {
-            $subMenu.removeClass(options.activeClass);
-            $subMenu.eq(toIndex).addClass(options.activeClass);
-		}
+
+            if (options.transition != 'fader') {
+                $smSliderInner.children('.'+options.children+'.'+options.activeClass).stop().animate({
+                    'left' : currPos
+                }, {
+                    duration : options.duration,
+                    easing   : options.easing,
+                    complete : function(){
+                        $(this).removeClass(options.activeClass);
+                        if (options.animationComplete) {
+                            options.animationComplete(toIndex) 
+                        }
+                    }
+                });
+                $smSlide.eq(toIndex).css('left', nextPos).addClass(options.activeClass).stop().animate({
+                    'left' : 0
+                }, {
+                    duration: options.duration,
+                    easing: options.easing,
+                    complete : function(){
+                        clickable = true;                       
+                    }
+                }); 
+            } else {
+                $smSliderInner.children('.'+options.children+'.'+options.activeClass).stop().fadeOut({
+                    duration : options.duration,
+                    easing   : options.easing,
+                    complete : function(){
+                        $(this).removeClass(options.activeClass);
+                        if (options.animationComplete) {
+                            options.animationComplete(toIndex) 
+                        }
+                    }
+                });
+                $smSlide.eq(toIndex).stop().fadeIn({
+                    duration : options.duration,
+                    easing   : options.easing,
+                    complete : function(){
+                        clickable = true;                       
+                    }
+                }).addClass(options.activeClass);
+            } 
+            if(options.animationStart) {
+                options.animationStart(toIndex)
+            }
+            if (options.pagination) {
+    			$smNavItem.removeClass(options.activeClass);
+    			$smNavItem.eq(toIndex).addClass(options.activeClass);
+    		}
+    		if (options.subMenu) {
+                $subMenu.removeClass(options.activeClass);
+                $subMenu.eq(toIndex).addClass(options.activeClass);
+    		}
+
+        }
     };
     var $smSlider      = $(this);
     var smSlideWidth   = $smSlider.width();
@@ -67,7 +103,6 @@
     var $smSliderInner = $('<div/>').addClass(options.innerBlock).appendTo(this);
     var $smSlide       = $smSlider.children('.'+options.children);
     var smSlideSizer   = $smSlide.length;
-
     if (options.start > smSlideSizer - 1) {
         var cIndex = smSlideSizer - 1;
     } else {
@@ -90,19 +125,30 @@
             var $smNav = $('<ul/>').addClass('sm_nav');
             var $smNavItem = $('<li/>');
             $smNav.appendTo($smSlider);
-            for (i=0; i < smSlideSizer; i++) {
-                $smNavItem.clone().data({
-                        'index' : i
-                        }).addClass('sm_nav-item')
-                         .appendTo($smNav);
+            if (options.typeCtrl != 'numeric') {
+                for (i=0; i < smSlideSizer; i++) {
+                    $smNavItem.clone().data({
+                            'index' : i
+                            }).addClass('sm_nav-item')
+                             .html($elemCtrl.clone())
+                             .appendTo($smNav);
+                }
+            } else {
+                for (i=0; i < smSlideSizer; i++) {
+                    $smNavItem.clone().data({
+                            'index' : i
+                            }).addClass('sm_nav-item')
+                              .text(i+1)
+                              .appendTo($smNav);
+                }
             }
-            var $smNavItem = $('.sm_nav-item');
+            var $smNavItem = $smSlider.find('.sm_nav-item');
             $smNavItem.eq(cIndex).addClass(options.activeClass);
         }
     if (options.subMenu) {
 		var $subMenu = $('.' + options.subMenuClass);
 	       	$subMenu.eq(cIndex).addClass(options.activeClass);
-	}		
+	   }		
     }
     if(options.autoPlay) {
         var timeOut = null;
@@ -161,30 +207,6 @@
             if( (subIndex != cIndex) && (subIndex <= (smSlideSizer-1))) {
                 cIndex = subIndex;
                 slideMove(cIndex, direction);                
-            }
-        })
-    };
-    if (options.keyboard) {
-        $(document).keyup(function(e){
-            switch (e.keyCode) {
-                case 37:
-                    cIndex--;       
-                    if (cIndex < 0)
-                        cIndex = smSlideSizer - 1;
-                    slideMove(cIndex, 'prev');
-                break
-                case 39:
-                    cIndex++;
-                    if (cIndex >= smSlideSizer)
-                        cIndex = 0;
-                    slideMove(cIndex, 'next');
-                break
-                case 27:
-                    if(cIndex != 0) {
-                        cIndex = 0;
-                        slideMove(cIndex, 'prev');                    
-                    }
-                break
             }
         })
     };
