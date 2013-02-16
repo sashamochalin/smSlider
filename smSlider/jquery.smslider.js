@@ -17,7 +17,7 @@
         delay             : 5000,
         hoverPause        : true,
         easing            : 'swing',
-        duration          : 500,
+        duration          : 600,
         flexible          : false,
         animationStart    : function(){},
         animationComplete : function(){}        
@@ -95,12 +95,14 @@
     };
     var $smSlider      = $(this);
     var smSlideWidth   = $smSlider.width();
+    var smSlideHeight  = $smSlider.height();
     if(options.flexible) {
         $(window).resize(function(){
             smSlideWidth = $smSlider.width();       
         });
     };
     var $smSliderInner = $('<div/>').addClass(options.innerBlock).appendTo(this);
+        $smSliderInner.css({'height':smSlideHeight});
     var $smSlide       = $smSlider.children('.'+options.children);
     var smSlideSizer   = $smSlide.length;
     if (options.start > smSlideSizer - 1) {

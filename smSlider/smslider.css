@@ -6,7 +6,6 @@
 }
 
 .sm_slider-inner {
-    height : 270px;
     overflow : hidden;
     position : relative;
     width: 100%;
@@ -88,6 +87,8 @@
 	width: 14px;
 	z-index: 999;
 	list-style-type: none;
+	font-size: 11px;
+	color: #ccc;
 }
 
 .sm_nav-item i {
@@ -102,15 +103,16 @@
 	-ms-border-radius: 6px;
 	-o-border-radius: 6px;
 	border-radius: 6px;
-	background-color: #bfbfbf;
+	background-color: #7f7f7f;
 }
 
 .sm_nav-item.active, .sm_nav-item.active:hover {
 	cursor: default;
+	color: #7e7e7e;
 }
 
 .sm_nav-item.active i{
-	background: #7f7f7f;
+	background-color: #bfbfbf;
 }
 
 .sm_nav-item:hover i {
