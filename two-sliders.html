@@ -1,0 +1,58 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title>.smSlider()</title>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=EmulateIE7, IE=9" />
+		<link rel="stylesheet" type="text/css" href="sm/css/demo.css" />
+		<link rel="stylesheet" type="text/css" href="sm/css/sm.css" />
+		<link rel="stylesheet" type="text/css" href="smSlider/smslider.css" />
+		
+		<script type="text/javascript" src="http://code.jquery.com/jquery-1.9.1.js"></script>
+		<script type="text/javascript" src="smSlider/jquery.smslider.js"></script>
+		<script type="text/javascript">
+		$(document).ready(function(){
+		    var $fSlider = $('#first-slider');
+		    var $sSlider = $('#second-slider');
+		    
+		    $fSlider.smSlider({
+		    	start : 2,
+		    	subMenu : true,
+		    	typeCtrl : 'numeric'
+		    });
+		    $sSlider.smSlider({
+		    	start : 4,
+		    	subMenu : true
+		    });
+		    
+		});
+		</script>
+	</head>
+	<body>
+		<a href="index.html" style="position: relative; top: -40px; left: 25px;">&larr; .smSlider()</a>
+		<div id="two-subMenu">
+			<a href="#" class="sm_submenu-item" data-index="0">первый</a>
+			<a href="#" class="sm_submenu-item" data-index="1">второй</a>
+			<a href="#" class="sm_submenu-item" data-index="2">третий</a>
+			<a href="#" class="sm_submenu-item" data-index="3">четвертый</a>
+			<a href="#" class="sm_submenu-item" data-index="4">пятый</a>
+		</div>
+		<div id="first-slider">
+			<div class="sm_slide" style="background:NavajoWhite">1</div>
+			<div class="sm_slide" style="background:MintCream">2</div>
+			<div class="sm_slide" style="background:SmokeWhite">3</div>
+			<div class="sm_slide" style="background:lightYellow">4</div>
+			<div class="sm_slide" style="background:lightSalmon">5</div>
+		</div>
+
+		<div id="second-slider">
+			<div class="sm_slide" style="background:Lavender">1</div>
+			<div class="sm_slide" style="background:Beige">2</div>
+			<div class="sm_slide" style="background:Azure">3</div>
+			<div class="sm_slide" style="background:Bisque">4</div>
+			<div class="sm_slide" style="background:FloralWhite ">5</div>
+		</div>
+
+
+	</body>
+</html>

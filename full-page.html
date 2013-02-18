@@ -1,0 +1,74 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title>Full page example .smSlider()</title>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=EmulateIE7, IE=9" />
+		<link rel="stylesheet" type="text/css" href="sm/css/sm.css" />
+		<link rel="stylesheet" type="text/css" href="sm/css/demo.css" />
+		<link rel="stylesheet" type="text/css" href="smSlider/smslider.css" />
+		<script type="text/javascript" src="http://code.jquery.com/jquery-1.9.0.min.js"></script>
+		<script type="text/javascript" src="http://gsgd.co.uk/sandbox/jquery/easing/jquery.easing.1.3.js"></script>
+		<script type="text/javascript" src="smSlider/jquery.smslider.js"></script>
+		<script type="text/javascript">
+			$(document).ready(function(){
+				var $smSlider = $('#full-page_slider');
+
+				$smSlider.smSlider({
+					pagination : false,
+					subMenu    : true,
+					flexible   : true
+				})
+			})
+		</script>
+		</head>
+	<body id="full-page-example">
+		<div id="demo-full-page">
+
+				<div class="logo big">
+					<a href="index.html"><img src="sm/img/logo.png" /></a>
+				</div>
+				<div id="full-page_slider">
+					<div class="sm_slide">
+						<img src="sm/img/stuff/full-page/pic0.jpg" />
+					</div>
+					<div class="sm_slide">
+						<img src="sm/img/stuff/full-page/pic1.jpg" />
+					</div>
+					<div class="sm_slide">
+						<img src="sm/img/stuff/full-page/pic2.jpg" />
+					</div>
+					<div class="sm_slide">
+						<img src="sm/img/stuff/full-page/pic3.jpg" />
+					</div>
+					<div class="sm_slide">
+						<img src="sm/img/stuff/full-page/pic4.jpg" />
+					</div>
+				</div>
+				<div id="sm_submenu">
+					<div class="sm_submenu-item" data-index="0">
+						<img src="sm/img/stuff/full-page/pics0.jpg" /><span class="year">1935</span>
+						<div class="sm_submenu-description">Археологический отголосок «Анжелюса» Милле</div>
+					</div>
+					<div class="sm_submenu-item" data-index="1">
+						<img src="sm/img/stuff/full-page/pics1.jpg" /><span class="year">1931</span>
+						<div class="sm_submenu-description">Постоянство памяти</div>
+					</div>
+					<div class="sm_submenu-item" data-index="2">
+						<img src="sm/img/stuff/full-page/pics2.jpg" /><span class="year">1937</span>
+						<div class="sm_submenu-description">Сон</div>
+					</div>
+					<div class="sm_submenu-item" data-index="3">
+						<img src="sm/img/stuff/full-page/pics3.jpg" /><span class="year">1933</span>
+						<div class="sm_submenu-description">Двуколка-привидение</div>
+					</div>
+					<div class="sm_submenu-item last" data-index="4">
+						<img src="sm/img/stuff/full-page/pics4.jpg" /><span class="year">1938</span>
+						<div class="sm_submenu-description">Явление лица и вазы с фруктами на берегу моря</div>
+					</div>
+				</div>
+				<p id="full-page_phrase">— например, несколько сюрреализмов Сальвадора Дали. ©</p>
+
+		</div>
+	</body>
+</html>

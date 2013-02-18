@@ -1,0 +1,180 @@
+* {
+	margin: 0px;
+	padding: 0px;
+}
+
+body {
+	color: #777;
+}
+
+/*styles for full page example*/
+#full-page-example {
+    background: url(../img/bg.png) #333;
+    padding: 0px;
+}
+
+#full-page_slider {
+	height: 602px;
+	margin: 0px auto;
+	position: relative;
+	width: 100%;
+}
+
+#full-page_slider .sm_slide {
+	height: 602px;
+}
+
+.logo.big {
+	height: 115px;
+	margin: 0px auto 10px;
+    width: 300px;
+}
+
+#full-page_phrase {
+	color: #7d7d7d;
+	font-size: .8em;
+	font-style: italic;
+	padding: 10px;
+	text-align: right;
+	text-shadow: 1px 1px 1px #2d2d2d;
+}
+
+#sm_submenu {
+	clear: both;
+	margin: 40px auto 0px;
+	overflow: hidden;
+	width: 800px;
+}
+
+#full-page-example .sm_submenu-item {
+	color: #ccc;
+	cursor: pointer;
+	float: left;
+	font-size: 10px;
+	height: 134px;
+	margin: 0px 50px 0 0;
+	padding: 8px 8px 4px;
+	width: 102px;
+}
+
+#full-page-example .sm_submenu-item img {
+	background: #4e4e4e;
+	box-shadow: 0px 0px 20px #000 inset;
+	padding: 1px;
+}
+
+#full-page-example .sm_submenu-item:hover img {
+	background: #ccc
+}
+
+#full-page-example .sm_submenu-item.last {
+	margin: 0px
+}
+
+#full-page-example .sm_submenu-item.active {
+	border-radius: 3px;
+	border: 1px #ff3311 solid;
+	box-shadow: 0px 0px 5px #000;
+	padding: 7px 7px 3px;
+}
+
+#full-page-example .sm_submenu-item.active:hover img {
+    background: #4e4e4e
+}
+
+.year {
+	background: rgba(0, 0, 0, 0.5);
+	left: 1px;
+	line-height: 18px;
+	padding: 2px 3px;
+	position: relative;
+	top: -21px;
+}
+
+#full-page-example .sm_slide.active img {
+	border: 1px #4c4c4c solid
+}
+/*end full page*/
+
+/*styles for fader*/
+
+#fader-demo {
+	padding: 0px 10px 40px;
+}
+
+#iphone {
+	width: 280px;
+	height: 480px;
+	padding: 103px 25px;
+	background: url(../img/stuff/fader/iphone.png) no-repeat;
+	position: relative;
+}
+
+.iphone-inner {
+	width: 280px;
+	height: 480px;
+	overflow: hidden;
+	position: relative;
+}
+
+.iphone-screen {
+	width: 270px;
+	height: 480px;
+	position: absolute;
+	display: none;
+	cursor: pointer;
+}
+
+.iphone-screen.active {
+	display: block;
+}
+
+#iphone .sm_nav {
+	bottom: 95px;
+	right: 50%;
+	margin-right: -35px;
+}
+/*end styles for fader*/
+
+/*two sliders*/
+
+#first-slider {
+	width: 400px;
+	height: 200px;
+	color: #c2c2c2;
+	font-size: 25px;
+	position: relative;
+	box-shadow: 0px 0px 20px #ccc;
+	top: 60px;
+	left: 25px;
+}
+
+#first-slider div {
+	height: 200px;
+}
+
+#second-slider {
+	width: 500px;
+	height: 150px;
+	color: #999;
+	font-size: 25px;
+	position: relative;
+	box-shadow: 0px 0px 20px #ccc;
+	top: 225px;
+	left: 425px;
+
+}
+
+#second-slider div {
+	height: 150px;
+}
+
+#two-subMenu {
+	margin:0px 25px;
+	text-align: center;
+}
+
+#two-subMenu a {
+	border-bottom: 1px dashed;
+	margin: 0px 10px;
+}
