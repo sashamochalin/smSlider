@@ -12,9 +12,6 @@ body {
 ::selection {
 	background: #fff7b5;
 }
-::-moz-selection {
-	background: #fff7b5;
-}
 
 a {
     color: rgb(65, 131, 196);
@@ -159,10 +156,6 @@ a:active {
 	top: 1px;	
 }
 
-.nav a span {
-	border-bottom: 1px dashed;
-}
-
 .nav a.active:active {
 	top: 0px;
 }
@@ -174,7 +167,6 @@ a:active {
 	-webkit-transition: color 0.3s ease;
 	transition: color 0.3s ease;
 	color: #ff7766;
-    border-bottom: 0px;
 }
 
 .nav a.active:hover, .nav a.active span:hover {
@@ -199,6 +191,7 @@ a:active {
 #stuff h2 {
 	color: #495961;
 	font-weight: normal;
+	font-size: 25px;
 	padding: 10px 0;
 }
 
