@@ -91,6 +91,8 @@
                 $subMenu.eq(toIndex).addClass(options.activeClass);
     		}
 
+        } else {
+            return false;
         }
     };
     var $smSlider      = $(this);
