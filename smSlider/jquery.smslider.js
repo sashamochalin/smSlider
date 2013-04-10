@@ -173,14 +173,18 @@
         }
     };
     $smPrev.bind('click', function(){
-        cIndex--;       
+        if (clickable) {
+            cIndex--
+        }      
         if (cIndex < 0) {
             cIndex = smSlideSizer - 1;
         }
         slideMove(cIndex, 'prev');
     });
     $smNext.bind('click', function(){
-        cIndex++;
+        if (clickable) {
+            cIndex++
+        }
         if (cIndex >= smSlideSizer) {
             cIndex = 0;            
         }
