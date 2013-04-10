@@ -83,13 +83,13 @@
                 options.animationStart(toIndex)
             }
             if (options.pagination) {
-    			$smNavItem.removeClass(options.activeClass);
-    			$smNavItem.eq(toIndex).addClass(options.activeClass);
-    		}
-    		if (options.subMenu) {
+                $smNavItem.removeClass(options.activeClass);
+                $smNavItem.eq(toIndex).addClass(options.activeClass);
+            }
+            if (options.subMenu) {
                 $subMenu.removeClass(options.activeClass);
                 $subMenu.eq(toIndex).addClass(options.activeClass);
-    		}
+            }
 
         } else {
             return false;
@@ -150,9 +150,9 @@
             $smNavItem.eq(cIndex).addClass(options.activeClass);
         }
     if (options.subMenu) {
-		var $subMenu = $('.' + options.subMenuClass);
-	       	$subMenu.eq(cIndex).addClass(options.activeClass);
-	   }		
+        var $subMenu = $('.' + options.subMenuClass);
+            $subMenu.eq(cIndex).addClass(options.activeClass);
+       }        
     }
     if(options.autoPlay) {
         var timeOut = null;
@@ -173,14 +173,18 @@
         }
     };
     $smPrev.bind('click', function(){
-        cIndex--;       
+        if (clickable) {
+            cIndex--
+        }      
         if (cIndex < 0) {
             cIndex = smSlideSizer - 1;
         }
         slideMove(cIndex, 'prev');
     });
     $smNext.bind('click', function(){
-        cIndex++;
+        if (clickable) {
+            cIndex++
+        }
         if (cIndex >= smSlideSizer) {
             cIndex = 0;            
         }
