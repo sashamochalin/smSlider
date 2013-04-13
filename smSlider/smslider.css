@@ -118,3 +118,7 @@
 .sm_nav-item:hover i {
 	background: #7f7f7f;
 }
+
+.sm_nav-item.active:hover i{
+	background-color: #bfbfbf;
+}
