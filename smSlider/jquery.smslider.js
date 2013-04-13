@@ -1,3 +1,10 @@
+/*!
+ * smSlider 0.1
+ * http://sashamochalin.github.io/smSlider/
+ *
+ * Copyright © 2013 Sasha Mochalin
+ */
+
 (function( $ ){
   $.fn.smSlider = function(options) {
   var defaults = {
