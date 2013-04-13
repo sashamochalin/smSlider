@@ -86,11 +86,11 @@ $(document).ready(function(){
         } 
         else if (scrollTop < $demoHeight) {
             $demoInner.css({
-                'transform' : 'translateY('-(scrollTop*2)+'px)',
-                '-ms-transform': 'translateY('+(scrollTop/2)+'px)', /* IE 9 */
-                '-webkit-transform': 'translateY('+(scrollTop/2)+'px)', /* Safari and Chrome */
-                '-o-transform': 'translateY('+(scrollTop/2)+'px)', /* Opera */
-                '-moz-transform': 'translateY('+(scrollTop/2)+'px)' /* Firefox */
+                'transform' : 'translateY('-(scrollTop*1.4)+'px)',
+                '-ms-transform': 'translateY('+(scrollTop/1.4)+'px)', /* IE 9 */
+                '-webkit-transform': 'translateY('+(scrollTop/1.4)+'px)', /* Safari and Chrome */
+                '-o-transform': 'translateY('+(scrollTop/1.4)+'px)', /* Opera */
+                '-moz-transform': 'translateY('+(scrollTop/1.4)+'px)' /* Firefox */
             });
         }
         if (scrollTop < dataPos('this')) {

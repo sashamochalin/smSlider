@@ -68,6 +68,8 @@ i.elemcode {
 	background : url(../img/top.gif);
 	overflow: hidden;
 	padding: 40px 0px 50px;
+	min-width: 1010px;
+	margin: 0 auto;
 }
 
 #demo_inner {
@@ -339,6 +341,7 @@ a:active {
 #footer {
     border-top: 1px #fdfdfd solid;
    	padding: 20px 20px 30px;
+   	position: relative;
 }
 
 #footer_inner {
@@ -361,4 +364,14 @@ a:active {
 #footer_inner li.email {
 	text-align: right;
 	float: right;
+}
+
+#back_to_top {
+	position: absolute;
+	left: 5px;
+	top: 15px;
+	font-size: 20px;
+	font-weight: bold;
+	color: #ccc;
+	cursor: pointer;
 }
