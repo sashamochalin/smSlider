@@ -20,7 +20,7 @@
         duration          : 600,
         flexible          : false,
         animationStart    : function(){},
-        animationComplete : function(){} // end       
+        animationComplete : function(){}  
   };
   var options = $.extend(defaults, options);
   return this.each(function() {

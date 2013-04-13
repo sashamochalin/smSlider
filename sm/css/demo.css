@@ -149,7 +149,7 @@ body {
 	left: 25px;
 }
 
-#first-slider div {
+#first-slider ul.sm_slider-inner li {
 	height: 200px;
 }
 
@@ -165,7 +165,7 @@ body {
 
 }
 
-#second-slider div {
+#second-slider ul.sm_slider-inner li {
 	height: 150px;
 }
 
