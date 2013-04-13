@@ -83,13 +83,13 @@
                 options.animationStart(toIndex)
             }
             if (options.pagination) {
-    			$smNavItem.removeClass(options.activeClass);
-    			$smNavItem.eq(toIndex).addClass(options.activeClass);
-    		}
-    		if (options.subMenu) {
+                $smNavItem.removeClass(options.activeClass);
+                $smNavItem.eq(toIndex).addClass(options.activeClass);
+            }
+            if (options.subMenu) {
                 $subMenu.removeClass(options.activeClass);
                 $subMenu.eq(toIndex).addClass(options.activeClass);
-    		}
+            }
 
         } else {
             return false;
@@ -103,9 +103,13 @@
             smSlideWidth = $smSlider.width();       
         });
     };
-    var $smSliderInner = $('<div/>').addClass(options.innerBlock).appendTo(this);
-        $smSliderInner.css({'height':smSlideHeight});
-    var $smSlide       = $smSlider.children('.'+options.children);
+    var $smSliderInner = $smSlider.children('ul').addClass(options.innerBlock);
+        $smSliderInner.css({'height'   :smSlideHeight,
+                            'overflow' : 'hidden',
+                            'position' : 'relative',
+                            'width'    : '100%'
+                          });
+    var $smSlide       = $smSliderInner.children('li').addClass(options.children);
     var smSlideSizer   = $smSlide.length;
     if (options.start > smSlideSizer - 1) {
         var cIndex = smSlideSizer - 1;
@@ -150,9 +154,9 @@
             $smNavItem.eq(cIndex).addClass(options.activeClass);
         }
     if (options.subMenu) {
-		var $subMenu = $('.' + options.subMenuClass);
-	       	$subMenu.eq(cIndex).addClass(options.activeClass);
-	   }		
+        var $subMenu = $('.' + options.subMenuClass);
+            $subMenu.eq(cIndex).addClass(options.activeClass);
+       }        
     }
     if(options.autoPlay) {
         var timeOut = null;
