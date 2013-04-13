@@ -110,6 +110,10 @@ body {
 	position: relative;
 }
 
+#iphone li {
+	list-style: none;
+}
+
 .iphone-inner {
 	width: 280px;
 	height: 480px;
