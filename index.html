@@ -4,6 +4,8 @@
 		<title>.smSlider()</title>
 		<meta charset="utf-8">
 		<meta http-equiv="X-UA-Compatible" content="IE=EmulateIE7, IE=9" />
+		<link rel="icon" href="/favicon.ico" type="image/x-icon" />
+		<link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
 		<link rel="stylesheet" type="text/css" href="sm/css/sm.css" />
 		<link rel="stylesheet" type="text/css" href="smSlider/smslider.css" />
 		<link href='http://fonts.googleapis.com/css?family=PT+Sans' rel='stylesheet' type='text/css'>
@@ -33,18 +35,20 @@
 				<img src="sm/img/stuff/pic2-back.png" class="backShadow" />
 				<img src="sm/img/stuff/pic3-back.png" class="backShadow" />
 				<div id="sm_slider">
-					<div class="sm_slide">
-						<img src="sm/img/stuff/pic0.jpg" />
-					</div>
-					<div class="sm_slide">
-						<img src="sm/img/stuff/pic1.jpg" />
-					</div>
-					<div class="sm_slide">
-						<img src="sm/img/stuff/pic2.jpg" />
-					</div>
-					<div class="sm_slide">
-						<img src="sm/img/stuff/pic3.jpg" />
-					</div>
+					<ul>
+						<li>
+							<img src="sm/img/stuff/pic0.jpg" />
+						</li>
+						<li>
+							<img src="sm/img/stuff/pic1.jpg" />
+						</li>
+						<li>
+							<img src="sm/img/stuff/pic2.jpg" />
+						</li>
+						<li>
+							<img src="sm/img/stuff/pic3.jpg" />
+						</li>
+					</ul>
 				</div>
 			</div>
 		</div>
@@ -53,7 +57,7 @@
 				<h2 class="tAnchor" data-name="this">smSlider</h2>
 
 				<p>
-					smSlider — полностраничный слайдер для веба.
+					smSlider — слайдер для веба.
 					<br/>
 					Весит всего 7 kb
 				</p>
@@ -95,7 +99,7 @@
 			<div class="part">
 				<h2 class="tAnchor" data-name="setup">Установка</h2>
 				<p>
-					1. Приаттачить на страницу файлы из <a class="pseudo" href="#">архива</a>.
+					1. Приаттачить на страницу файлы из <a class="pseudo" href="#">архива</a>:
 				</p>
 				<div class="code">
 <pre style="color:#586e75"><span style="color:#93a1a1">&lt;</span><span style="color:#268bd2;font-weight:700">link</span> <span style="color:#93a1a1">type</span>=<span style="color:#269186"><span style="color:#269186">"</span>text/css<span style="color:#269186">"</span></span>  <span style="color:#93a1a1">rel</span>=<span style="color:#269186"><span style="color:#269186">"</span>stylesheet<span style="color:#269186">"</span></span> <span style="color:#93a1a1">href</span>=<span style="color:#269186"><span style="color:#269186">"</span>smslider/sm.slider.css<span style="color:#269186">"</span></span><span style="color:#93a1a1"> /></span>
@@ -103,16 +107,18 @@
 <span style="color:#93a1a1">&lt;</span><span style="color:#268bd2;font-weight:700">script</span> <span style="color:#93a1a1">type</span>=<span style="color:#269186"><span style="color:#269186">"</span>text/javascript<span style="color:#269186">"</span></span> <span style="color:#93a1a1">src</span>=<span style="color:#269186"><span style="color:#269186">"</span>smslider/jquery.sm.slider.min.js<span style="color:#269186">"</span></span><span style="color:#93a1a1">>&lt;/</span><span style="color:#268bd2;font-weight:700">script</span><span style="color:#93a1a1">></span>
 </pre>
 				</div>
-				<p>2. Подготовить html</p>
+				<p>2. Подготовить html:</p>
 				<div class="code">
 <pre style="color:#586e75"><span style="color:#93a1a1">&lt;</span><span style="color:#268bd2;font-weight:700">div</span> <span style="color:#93a1a1">id</span><span style="color:#708284">=</span><span style="color:#269186"><span style="color:#269186">"</span>sm_slider<span style="color:#269186">"</span></span><span style="color:#93a1a1">></span>
-    <span style="color:#93a1a1">&lt;</span><span style="color:#268bd2;font-weight:700">div</span> <span style="color:#93a1a1">class</span>=<span style="color:#269186"><span style="color:#269186">"</span>sm_slide<span style="color:#269186">"</span></span><span style="color:#93a1a1">></span><span style="color:#93a1a1">...</span><span style="color:#93a1a1">&lt;/</span><span style="color:#268bd2;font-weight:700">div</span><span style="color:#93a1a1">></span>
-    <span style="color:#93a1a1">&lt;</span><span style="color:#268bd2;font-weight:700">div</span> <span style="color:#93a1a1">class</span>=<span style="color:#269186"><span style="color:#269186">"</span>sm_slide<span style="color:#269186">"</span></span><span style="color:#93a1a1">></span><span style="color:#93a1a1">...</span><span style="color:#93a1a1">&lt;/</span><span style="color:#268bd2;font-weight:700">div</span><span style="color:#93a1a1">></span>
-    <span style="color:#93a1a1">&lt;</span><span style="color:#268bd2;font-weight:700">div</span> <span style="color:#93a1a1">class</span>=<span style="color:#269186"><span style="color:#269186">"</span>sm_slide<span style="color:#269186">"</span></span><span style="color:#93a1a1">></span><span style="color:#93a1a1">...</span><span style="color:#93a1a1">&lt;/</span><span style="color:#268bd2;font-weight:700">div</span><span style="color:#93a1a1">></span>
+    <span style="color:#93a1a1">&lt;</span><span style="color:#268bd2;font-weight:700">ul</span><span style="color:#93a1a1">></span>
+        <span style="color:#93a1a1">&lt;</span><span style="color:#268bd2;font-weight:700">li</span><span style="color:#93a1a1">></span>...<span style="color:#93a1a1">&lt;/</span><span style="color:#268bd2;font-weight:700">li</span><span style="color:#93a1a1">></span>
+        <span style="color:#93a1a1">&lt;</span><span style="color:#268bd2;font-weight:700">li</span><span style="color:#93a1a1">></span>...<span style="color:#93a1a1">&lt;/</span><span style="color:#268bd2;font-weight:700">li</span><span style="color:#93a1a1">></span>
+        <span style="color:#93a1a1">&lt;</span><span style="color:#268bd2;font-weight:700">li</span><span style="color:#93a1a1">></span>...<span style="color:#93a1a1">&lt;/</span><span style="color:#268bd2;font-weight:700">li</span><span style="color:#93a1a1">></span>
+    <span style="color:#93a1a1">&lt;/</span><span style="color:#268bd2;font-weight:700">ul</span><span style="color:#93a1a1">></span>
 <span style="color:#93a1a1">&lt;/</span><span style="color:#268bd2;font-weight:700">div</span><span style="color:#93a1a1">></span>
 </pre>
 				</div>
-				<p>3. Запустить слайдер</p>
+				<p>3. Запустить слайдер:</p>
 				<div class="code">
 <pre style="color:#586e75"><span style="color:#859900">$</span><span style="color:#93a1a1">(</span><span style="color:#859900">document</span><span style="color:#93a1a1">)</span>.ready<span style="color:#93a1a1">(</span><span style="color:#268bd2">function</span><span style="color:#93a1a1">(</span><span style="color:#93a1a1">)</span><span style="color:#268bd2">{</span>
     <span style="color:#859900">$</span><span style="color:#93a1a1">(</span><span style="color:#269186"><span style="color:#c60000">'</span>#sm_slider<span style="color:#c60000">'</span></span><span style="color:#93a1a1">)</span>.smSlider<span style="color:#93a1a1">(</span><span style="color:#93a1a1">)</span>

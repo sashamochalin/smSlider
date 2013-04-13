@@ -237,11 +237,13 @@ a:active {
 	left: 10px;
 	position: absolute;
 	font-size: 19px;
+    font-style: normal;
 }
 
 .options_wrap:hover .anchor {
 	visibility: visible;
     color: #ff7766;
+
 }
 
 .options_wrap.current .anchor {   

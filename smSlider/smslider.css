@@ -5,11 +5,11 @@
 	width: 960px;
 }
 
-.sm_slider-inner {
-    overflow : hidden;
-    position : relative;
-    width: 100%;
- }
+#sm_slider ul {
+	margin: 0px;
+	padding: 0px;
+	list-style: none;
+}
     
 .sm_slide {
 	color: #3d3d3d;

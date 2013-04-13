@@ -103,9 +103,13 @@
             smSlideWidth = $smSlider.width();       
         });
     };
-    var $smSliderInner = $('<div/>').addClass(options.innerBlock).appendTo(this);
-        $smSliderInner.css({'height':smSlideHeight});
-    var $smSlide       = $smSlider.children('.'+options.children);
+    var $smSliderInner = $smSlider.children('ul').addClass(options.innerBlock);
+        $smSliderInner.css({'height'   :smSlideHeight,
+                            'overflow' : 'hidden',
+                            'position' : 'relative',
+                            'width'    : '100%'
+                          });
+    var $smSlide       = $smSliderInner.children('li').addClass(options.children);
     var smSlideSizer   = $smSlide.length;
     if (options.start > smSlideSizer - 1) {
         var cIndex = smSlideSizer - 1;
