@@ -1,4 +1,4 @@
-/*!
+/*
  * smSlider 0.1
  * http://sashamochalin.github.io/smSlider/
  *
