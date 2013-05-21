@@ -4,32 +4,40 @@ This is simple [JQuery](http://jquery.com) slider plugin
 ## Installation
 1. Download or clone plugin in your project:
 
-		git clone git@github.com:sashamochalin/smSlider.git ./smslider/
+``` bash
+$ git clone git@github.com:sashamochalin/smSlider.git ./smslider/
+```
 
 2. Include scripts and styles:
 
-		<link type="text/css"  rel="stylesheet" href="smslider/sm.slider.css" />
-		<script type="text/javascript" src="http://code.jquery.com/jquery-latest.min.js"></script>
-		<script type="text/javascript" src="smslider/jquery.sm.slider.min.js"></script>
+``` html
+<link type="text/css"  rel="stylesheet" href="smslider/sm.slider.css" />
+<script type="text/javascript" src="http://code.jquery.com/jquery-latest.min.js"></script>
+<script type="text/javascript" src="smslider/jquery.sm.slider.min.js"></script>
+```		
 		
 3. Create html with your slides:
 
-		<div id="sm_slider">
-    		<ul>
-        		<li>...</li>
-        		<li>...</li>
-        		<li>...</li>
-    		</ul>
-		</div>
-		
+``` html
+<div id="sm_slider">
+	<ul>
+		<li>...</li>
+		<li>...</li>
+		<li>...</li>
+	</ul>
+</div>
+```
+
 4. Apply slider for your list:
 
-		<script type="text/javascript">
-			$(document).ready(function(){
-    			$('#sm_slider').smSlider()
-			})
-		</script>
-		
+``` html
+<script type="text/javascript">
+	$(document).ready(function(){
+    		$('#sm_slider').smSlider()
+	})
+</script>
+```
+
 ## Examples
 
 - [Fullscreen](http://sashamochalin.github.io/smSlider/full-page.html)
@@ -39,10 +47,12 @@ This is simple [JQuery](http://jquery.com) slider plugin
 ## Options and Methods
 - start `number`
 
-		// start with element:
-		$elem.smSlider({		
-    		start : 0    		
-		});
+``` javascript
+// start with element:
+	$elem.smSlider({		
+    	start : 0    		
+});
+```
 
 - transition `string`
 
