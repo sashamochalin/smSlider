@@ -165,7 +165,7 @@
             $subMenu.eq(cIndex).addClass(options.activeClass);
        }        
     }
-    if(options.autoPlay) {
+    if(options.autoPlay && (smSlideSizer > 1)) {
         var timeOut = null;
         var autoPlay = function(){
             cIndex++;
@@ -183,6 +183,7 @@
             })
         }
     };
+    if(smSlideSizer > 1) {
     $smPrev.bind('click', function(){
         if (clickable) {
             cIndex--
@@ -228,6 +229,7 @@
                 slideMove(cIndex, direction);                
             }
         })
+    };
     };
   });
  };
