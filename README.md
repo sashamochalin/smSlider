@@ -128,7 +128,7 @@ $elem.smSlider({
     });
 ```
 - autoPlay `boolean`
-
+``` javascript
     // auto change current slide
     $elem.smSlider({
         autoPlay : true
