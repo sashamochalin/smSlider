@@ -53,131 +53,145 @@ $ git clone git@github.com:sashamochalin/smSlider.git ./smslider/
     	start : 0    		
 });
 ```
-
 - transition `string`
 
-		// animation type
-		$elem.smSlider({
-			// can be 'animate' or 'fader'
-    		transition : 'animate'    		
-		});
-
+``` javascript
+// animation type
+$elem.smSlider({
+    // can be 'animate' or 'fader'
+    transition : 'animate'    		
+});
+```
 - activeClass `string`
 
-		// now showing element class
-		$elem.smSlider({
-    		activeClass : 'active'
-		});
-
+``` javascript
+    // now showing element class
+    $elem.smSlider({
+        activeClass : 'active'
+    });
+```
 - autoArr `boolean`
 
-
-		// auto generating control buttons
-		$elem.smSlider({
-    		autoArr : true
-		});
-		
+``` javascript
+    // auto generating control buttons
+    $elem.smSlider({
+        autoArr : true
+    });
+```
 - prev `string`
-		
-		// class of prevent control button
-		$elem.smSlider({
-    		prev : 'sm_prev'
-		});
+
+``` javascript
+    // class of prevent control button
+    $elem.smSlider({
+        prev : 'sm_prev'
+    });
 
 - next `string`
-		
-		// class of next control button
-		$elem.smSlider({
-    		next : 'sm_next'
-		});
 
+ ``` javascript   
+    // class of next control button
+    $elem.smSlider({
+        next : 'sm_next'
+    });
+```
 - pagination `boolean`
 
-		// turn on pagination buttons
-		$elem.smSlider({
-    		pagination : true
-		});
-
+``` javascript
+    // turn on pagination buttons
+    $elem.smSlider({
+        pagination : true
+    });
+```
 - typeCtrl `string`
 
-		// style of pagination buttons
-		$elem.smSlider({
-			// can be 'dots' or 'numeric'
-    		typeCtrl : 'dots'
-		});
-
+``` javascript
+    // style of pagination buttons
+    $elem.smSlider({
+        // can be 'dots' or 'numeric'
+        typeCtrl : 'dots'
+    });
+```
 - subMenu `boolean`
 
-		// turn on additional controls
-		$elem.smSlider({
-    		subMenu : 'sm_submenu-item'
-		});
-
+``` javascript
+    // turn on additional controls
+    $elem.smSlider({
+        subMenu : 'sm_submenu-item'
+    });
+```
 - subMenuClass `string`
 
-		// css class for additional controls
-		$elem.smSlider({
-    		subMenuClass : 'sm_submenu-item'
-		});
-
+``` javascript
+    // css class for additional controls
+    $elem.smSlider({
+        subMenuClass : 'sm_submenu-item'
+    });
+```
 - autoPlay `boolean`
 
-		// auto change current slide
-		$elem.smSlider({
-    		autoPlay : true
-		});
-
+    // auto change current slide
+    $elem.smSlider({
+        autoPlay : true
+    });
+```
 - duration `number`
 
-		// auto change animation speed
-		$elem.smSlider({
-    		duration : 600
-		});
+``` javascript
+    // auto change animation speed
+    $elem.smSlider({
+        duration : 600
+    });
 
 - delay `number`
 
-		// auto change timeout in milliseconds
-		$elem.smSlider({
-    		delay : 5000
-		});
-
+``` javascript
+    // auto change timeout in milliseconds
+    $elem.smSlider({
+        delay : 5000
+    });
+```
 - hoverPause `boolean`
 
-		// turn on or turn off auto animation pause on hover
-		$elem.smSlider({
-    		hoverPause : false
-		});
-
+``` javascript
+    // turn on or turn off auto animation pause on hover
+    $elem.smSlider({
+        hoverPause : false
+    });
+```
 - easing `string`
 
-		// animation easing
-		$elem.smSlider({
-			// can be 'swing' or 'linear'
-    		easing : 'swing'
-		});
-
+``` javascript
+    // animation easing
+    $elem.smSlider({
+        // can be 'swing' or 'linear'
+        easing : 'swing'
+    });
+```
 - flexible `boolean`
 
-		// width in persents
-		$elem.smSlider({
-    		flexible : true
-		});
+``` javascript
+    // width in persents
+    $elem.smSlider({
+        flexible : true
+    });
 
 - animationStart `function`
 
-		// callback function, called with start animation
-		$elem.smSlider({
-    		animationStart : function() {
-        		//do something
-    		}
-		});
-
+``` javascript
+    // callback function, called with start animation
+    $elem.smSlider({
+        animationStart : function() {
+            //do something
+        }
+    });
+```
 - animationComplete `function`
 
-		// callback function, called with complete animation
-		$elem.smSlider({
-    		animationComplete : function() {
-        		//do something
-    		}
-		});
-
+``` javascript
+    // callback function, called with complete animation
+    $elem.smSlider({
+        animationComplete : function() {
+            //do something
+        }
+    });
+```
