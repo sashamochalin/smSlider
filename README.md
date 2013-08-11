@@ -141,7 +141,7 @@ $elem.smSlider({
     $elem.smSlider({
         duration : 600
     });
-
+```
 - delay `number`
 
 ``` javascript
@@ -174,7 +174,7 @@ $elem.smSlider({
     $elem.smSlider({
         flexible : true
     });
-
+```
 - animationStart `function`
 
 ``` javascript
