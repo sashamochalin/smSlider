@@ -88,7 +88,7 @@ $elem.smSlider({
 
 - next `string`
 
- ``` javascript   
+``` javascript   
     // class of next control button
     $elem.smSlider({
         next : 'sm_next'
