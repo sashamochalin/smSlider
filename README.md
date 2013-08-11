@@ -85,7 +85,7 @@ $elem.smSlider({
     $elem.smSlider({
         prev : 'sm_prev'
     });
-
+```
 - next `string`
 
 ``` javascript   
