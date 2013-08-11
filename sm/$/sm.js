@@ -21,6 +21,7 @@ $(document).ready(function(){
     var $htmlBody = $('html, body');
     var $demoInner = $('#demo_inner');
     var $demoHeight = $demoInner.outerHeight();
+    var $gotoUp     = $('.gotoup')
     var params = {
         duration  : 400,
         compSize  : 65,
@@ -31,10 +32,7 @@ $(document).ready(function(){
         $htmlBody.animate({ scrollTop: 0 }, params.duration);
         document.location.hash = '';
     }
-    $logo.click(function(){
-        toTop()
-    });
-    $backToTop.click(function(){
+    $gotoUp.click(function(){
         toTop()
     });
     $anchor.click(function(){
