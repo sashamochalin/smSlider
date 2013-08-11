@@ -48,19 +48,19 @@ $ git clone git@github.com:sashamochalin/smSlider.git ./smslider/
 - start `number`
 
 ``` javascript
-// start with element:
-	$elem.smSlider({		
-    	start : 0    		
-});
+    // start with element:
+        $elem.smSlider({		
+            start : 0    		
+    });
 ```
 - transition `string`
 
 ``` javascript
-// animation type
-$elem.smSlider({
-    // can be 'animate' or 'fader'
-    transition : 'animate'    		
-});
+    // animation type
+    $elem.smSlider({
+        // can be 'animate' or 'fader'
+        transition : 'animate'    		
+    });
 ```
 - activeClass `string`
 
