@@ -183,50 +183,58 @@
             })
         }
     };
+<<<<<<< HEAD
     if (smSlideSizer > 1) {
+=======
+    if(smSlideSizer > 1) {
+>>>>>>> FETCH_HEAD
     $smPrev.bind('click', function(){
         if (clickable) {
             cIndex--
-        }      
-        if (cIndex < 0) {
-            cIndex = smSlideSizer - 1;
+            if (cIndex < 0) {
+                cIndex = smSlideSizer - 1;
+            }
+            slideMove(cIndex, 'prev');
         }
-        slideMove(cIndex, 'prev');
     });
     $smNext.bind('click', function(){
         if (clickable) {
             cIndex++
+            if (cIndex >= smSlideSizer) {
+                cIndex = 0;            
+            }
+            slideMove(cIndex, 'next');
         }
-        if (cIndex >= smSlideSizer) {
-            cIndex = 0;            
-        }
-        slideMove(cIndex, 'next');
     });
     if (options.pagination) {
         $smNavItem.on('click', function(){
-            navIndex = $(this).data('index');
-            if(navIndex > cIndex) {
-                direction = 'next'
-            } else {
-                direction = 'prev'
-            }
-            if($(this).data('index') != cIndex) {
-                cIndex = navIndex;
-                slideMove(cIndex, direction);                
+            if (clickable) {
+                navIndex = $(this).data('index');
+                if(navIndex > cIndex) {
+                    direction = 'next'
+                } else {
+                    direction = 'prev'
+                }
+                if($(this).data('index') != cIndex) {
+                    cIndex = navIndex;
+                    slideMove(cIndex, direction);                
+                }
             }
         })
     };
     if (options.subMenu) {
         $subMenu.bind('click', function(){
-            subIndex = $(this).data('index');
-            if(subIndex > cIndex) {
-                direction = 'next'
-            } else {
-                direction = 'prev'
-            }
-            if( (subIndex != cIndex) && (subIndex <= (smSlideSizer-1))) {
-                cIndex = subIndex;
-                slideMove(cIndex, direction);                
+            if (clickable) {
+                subIndex = $(this).data('index');
+                if(subIndex > cIndex) {
+                    direction = 'next'
+                } else {
+                    direction = 'prev'
+                }
+                if( (subIndex != cIndex) && (subIndex <= (smSlideSizer-1))) {
+                    cIndex = subIndex;
+                    slideMove(cIndex, direction);                
+                }
             }
         })
     };
