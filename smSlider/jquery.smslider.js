@@ -4,7 +4,6 @@
  *
  * Copyright © 2013 Sasha Mochalin
  */
-
 (function( $ ){
   $.fn.smSlider = function(options) {
   var defaults = {
@@ -44,7 +43,6 @@
                 currPos = moveNext;
                 nextPos = movePrev;
             }
-
             if (options.transition != 'fader') {
                 $smSliderInner.children('.'+options.children+'.'+options.activeClass).stop().animate({
                     'left' : currPos
@@ -111,7 +109,7 @@
         });
     };
     var $smSliderInner = $smSlider.children('ul').addClass(options.innerBlock);
-        $smSliderInner.css({'height'   :smSlideHeight,
+        $smSliderInner.css({'height'   : smSlideHeight,
                             'overflow' : 'hidden',
                             'position' : 'relative',
                             'width'    : '100%'
@@ -183,11 +181,8 @@
             })
         }
     };
-<<<<<<< HEAD
-    if (smSlideSizer > 1) {
-=======
+
     if(smSlideSizer > 1) {
->>>>>>> FETCH_HEAD
     $smPrev.bind('click', function(){
         if (clickable) {
             cIndex--

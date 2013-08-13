@@ -357,11 +357,11 @@ a:active {
 	list-style-type: none;
 }
 
-#footer_inner li.year {
+#footer_inner li.middle {
 	text-align: center;
 }
 
-#footer_inner li.email {
+#footer_inner li.right {
 	text-align: right;
 	float: right;
 }

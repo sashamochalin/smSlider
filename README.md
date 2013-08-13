@@ -2,13 +2,13 @@
 This is simple [JQuery](http://jquery.com) slider plugin
 
 ## Installation
-1. Download or clone plugin in your project:
+* Download or clone plugin in your project:
 
 ``` bash
 $ git clone git@github.com:sashamochalin/smSlider.git ./smslider/
 ```
 
-2. Include scripts and styles:
+* Include scripts and styles:
 
 ``` html
 <link type="text/css"  rel="stylesheet" href="smslider/sm.slider.css" />
@@ -16,7 +16,7 @@ $ git clone git@github.com:sashamochalin/smSlider.git ./smslider/
 <script type="text/javascript" src="smslider/jquery.sm.slider.min.js"></script>
 ```		
 		
-3. Create html with your slides:
+* Create html with your slides:
 
 ``` html
 <div id="sm_slider">
@@ -28,7 +28,7 @@ $ git clone git@github.com:sashamochalin/smSlider.git ./smslider/
 </div>
 ```
 
-4. Apply slider for your list:
+* Apply slider for your list:
 
 ``` html
 <script type="text/javascript">
@@ -116,7 +116,7 @@ $ git clone git@github.com:sashamochalin/smSlider.git ./smslider/
 ``` javascript
     // turn on additional controls
     $elem.smSlider({
-        subMenu : 'sm_submenu-item'
+        subMenu : false
     });
 ```
 - subMenuClass `string`
@@ -128,6 +128,7 @@ $ git clone git@github.com:sashamochalin/smSlider.git ./smslider/
     });
 ```
 - autoPlay `boolean`
+
 ``` javascript
     // auto change current slide
     $elem.smSlider({
@@ -181,7 +182,7 @@ $ git clone git@github.com:sashamochalin/smSlider.git ./smslider/
     // callback function, called with start animation
     $elem.smSlider({
         animationStart : function() {
-            //do something
+            //do something...
         }
     });
 ```
@@ -191,7 +192,7 @@ $ git clone git@github.com:sashamochalin/smSlider.git ./smslider/
     // callback function, called with complete animation
     $elem.smSlider({
         animationComplete : function() {
-            //do something
+            //do something...
         }
     });
 ```
