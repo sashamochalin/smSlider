@@ -366,6 +366,11 @@ a:active {
 	float: right;
 }
 
+#footer_inner li .date {
+	padding: 7px;
+	display: block;
+}
+
 #back_to_top {
 	position: absolute;
 	left: 5px;
