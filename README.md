@@ -1,14 +1,14 @@
 # smSlider
-This is simple [JQuery](http://jquery.com) slider plugin
+This is simple [JQuery](http://jquery.com) slider plugin.
 
 ## Installation
-1. Download or clone plugin in your project:
+* Download or clone plugin in your project:
 
 ``` bash
 $ git clone git@github.com:sashamochalin/smSlider.git ./smslider/
 ```
 
-2. Include scripts and styles:
+* Include scripts and styles:
 
 ``` html
 <link type="text/css"  rel="stylesheet" href="smslider/sm.slider.css" />
@@ -16,7 +16,7 @@ $ git clone git@github.com:sashamochalin/smSlider.git ./smslider/
 <script type="text/javascript" src="smslider/jquery.sm.slider.min.js"></script>
 ```		
 		
-3. Create html with your slides:
+* Create html with your slides:
 
 ``` html
 <div id="sm_slider">
@@ -28,7 +28,7 @@ $ git clone git@github.com:sashamochalin/smSlider.git ./smslider/
 </div>
 ```
 
-4. Apply slider for your list:
+* Apply slider for your list:
 
 ``` html
 <script type="text/javascript">
@@ -128,6 +128,7 @@ $ git clone git@github.com:sashamochalin/smSlider.git ./smslider/
     });
 ```
 - autoPlay `boolean`
+
 ``` javascript
     // auto change current slide
     $elem.smSlider({
