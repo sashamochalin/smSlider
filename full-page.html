@@ -13,24 +13,9 @@
 		<link rel="stylesheet" type="text/css" href="sm/css/sm.css" />
 		<link rel="stylesheet" type="text/css" href="sm/css/demo.css" />
 		<link rel="stylesheet" type="text/css" href="smSlider/smslider.css" />
-		<script type="text/javascript" src="http://code.jquery.com/jquery-1.9.0.min.js"></script>
-
-		<script type="text/javascript" src="smSlider/jquery.smslider.min.js"></script>
-		<script type="text/javascript">
-			$(document).ready(function(){
-				var $smSlider = $('#full-page_slider');
-
-				$smSlider.smSlider({
-					pagination : false,
-					subMenu    : true,
-					flexible   : true
-				})
-			})
-		</script>
-		</head>
+	</head>
 	<body id="full-page-example">
 		<div id="demo-full-page">
-
 				<div class="logo big">
 					<a href="index.html"><img src="sm/img/logo.png" /></a>
 				</div>
@@ -76,7 +61,45 @@
 					</div>
 				</div>
 				<p id="full-page_phrase">— например, несколько сюрреализмов Сальвадора Дали. ©</p>
-
 		</div>
+		<!-- Yandex.Metrika counter -->
+		<script type="text/javascript">
+		(function (d, w, c) {
+		    (w[c] = w[c] || []).push(function() {
+		        try {
+		            w.yaCounter22230172 = new Ya.Metrika({id:22230172,
+                    clickmap:true,
+                    trackLinks:true,
+                    accurateTrackBounce:true});
+		        } catch(e) { }
+		    });
+		    var n = d.getElementsByTagName("script")[0],
+		        s = d.createElement("script"),
+		        f = function () { n.parentNode.insertBefore(s, n); };
+		    s.type = "text/javascript";
+		    s.async = true;
+		    s.src = (d.location.protocol == "https:" ? "https:" : "http:") + "//mc.yandex.ru/metrika/watch.js";
+
+		    if (w.opera == "[object Opera]") {
+		        d.addEventListener("DOMContentLoaded", f, false);
+		    } else { f(); }
+		})(document, window, "yandex_metrika_callbacks");
+		</script>
+		<noscript><div><img src="//mc.yandex.ru/watch/22230172" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+		<!-- /Yandex.Metrika counter -->
+		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+		<script type="text/javascript" src="sm/$/html5shiv.js"></script>
+		<script type="text/javascript" src="smSlider/jquery.smslider.min.js"></script>
+		<script type="text/javascript">
+			$(document).ready(function(){
+				var $smSlider = $('#full-page_slider');
+
+				$smSlider.smSlider({
+					pagination : false,
+					subMenu    : true,
+					flexible   : true
+				})
+			});
+		</script>
 	</body>
 </html>

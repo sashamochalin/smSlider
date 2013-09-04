@@ -29,16 +29,21 @@ $(document).ready(function(){
     var params = {
         duration  : 1000,
         compSize  : 65,
-        easing    : 'easeInOutQuart',
+        easing    : 'swing',
         classNav  : 'current',
         classLink : 'active'
     }
     var toTop = function() {
-        $htmlBody.animate({ scrollTop: 0 }, params.duration);
-        document.location.hash = '';
+        $htmlBody.animate({ scrollTop: 0 }, {
+                duration : params.duration,
+                easing   : params.easing,
+                complete : function() {
+                    document.location.href.substr(0, document.location.href.indexOf('#'));
+                }
+            })
     }
     $gotoUp.click(function(){
-        toTop()
+        toTop();
     });
     $anchor.click(function(){
         var $thisWrap   = $(this).parent();
@@ -60,7 +65,7 @@ $(document).ready(function(){
         }
     });
     if(document.location.hash) {
-        $(document.location.hash).addClass('current');
+        $(document.location.hash).addClass(params.classNav);
         var thisWrapTop = $(document.location.hash).offset().top - params.compSize;
         $htmlBody.animate({ scrollTop: thisWrapTop }, 10);
     };
@@ -81,7 +86,7 @@ $(document).ready(function(){
                 duration : params.duration,
                 easing   : params.easing,
                 complete : function() {
-                    document.location.hash = '/#';
+                    document.location.href.substr(0, document.location.href.indexOf('#'));
                 }
         });
         }
@@ -91,15 +96,6 @@ $(document).ready(function(){
         var scrollTop = $(window).scrollTop();
         if(scrollTop <= 0) {
             $demoInner.removeAttr('style');
-        } 
-        else if (scrollTop < $demoHeight) {
-            $demoInner.css({
-                'transform' : 'translateY('-(scrollTop*1.4)+'px)',
-                '-ms-transform': 'translateY('+(scrollTop/1.4)+'px)', /* IE 9 */
-                '-webkit-transform': 'translateY('+(scrollTop/1.4)+'px)', /* Safari and Chrome */
-                '-o-transform': 'translateY('+(scrollTop/1.4)+'px)', /* Opera */
-                '-moz-transform': 'translateY('+(scrollTop/1.4)+'px)' /* Firefox */
-            });
         }
         if (scrollTop < dataPos('this')) {
             $navItem.removeClass(params.classLink);

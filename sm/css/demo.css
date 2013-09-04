@@ -55,6 +55,7 @@ body {
 	margin: 0px 50px 0 0;
 	padding: 8px 8px 4px;
 	width: 102px;
+	position: relative;
 }
 
 #full-page-example .sm_submenu-item img {
@@ -83,12 +84,20 @@ body {
 }
 
 .year {
-	background: rgba(0, 0, 0, 0.5);
-	left: 1px;
+	background: #000;
+	top: 50px;
+	left: 9px;
 	line-height: 18px;
 	padding: 2px 3px;
-	position: relative;
-	top: -21px;
+	position: absolute;
+	opacity : .5;
+	-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=50)";
+	filter: alpha(opacity=50);
+}
+
+#full-page-example .sm_submenu-item.active .year {
+	top: 49px;
+	left: 8px;
 }
 
 #full-page-example .sm_slide.active img {
@@ -97,7 +106,6 @@ body {
 /*end full page*/
 
 /*styles for fader*/
-
 #fader-demo {
 	padding: 0px 10px 40px;
 }

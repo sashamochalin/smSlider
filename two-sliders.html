@@ -32,7 +32,6 @@
 				<li style="background:lightSalmon">5</li>
 			</ul>
 		</div>
-
 		<div id="second-slider">
 			<ul>
 				<li style="background:Lavender">1</li>
@@ -42,13 +41,37 @@
 				<li style="background:FloralWhite">5</li>
 			</ul>
 		</div>
-		<script type="text/javascript" src="http://code.jquery.com/jquery-1.9.1.js"></script>
+		<!-- Yandex.Metrika counter -->
+		<script type="text/javascript">
+		(function (d, w, c) {
+		    (w[c] = w[c] || []).push(function() {
+		        try {
+		            w.yaCounter22230172 = new Ya.Metrika({id:22230172,
+                    clickmap:true,
+                    trackLinks:true,
+                    accurateTrackBounce:true});
+		        } catch(e) { }
+		    });
+		    var n = d.getElementsByTagName("script")[0],
+		        s = d.createElement("script"),
+		        f = function () { n.parentNode.insertBefore(s, n); };
+		    s.type = "text/javascript";
+		    s.async = true;
+		    s.src = (d.location.protocol == "https:" ? "https:" : "http:") + "//mc.yandex.ru/metrika/watch.js";
+
+		    if (w.opera == "[object Opera]") {
+		        d.addEventListener("DOMContentLoaded", f, false);
+		    } else { f(); }
+		})(document, window, "yandex_metrika_callbacks");
+		</script>
+		<noscript><div><img src="//mc.yandex.ru/watch/22230172" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+		<!-- /Yandex.Metrika counter -->
+		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
 		<script type="text/javascript" src="smSlider/jquery.smslider.min.js"></script>
 		<script type="text/javascript">
 		$(document).ready(function(){
 		    var $fSlider = $('#first-slider');
 		    var $sSlider = $('#second-slider');
-		    
 		    $fSlider.smSlider({
 		    	start : 2,
 		    	subMenu : true,
@@ -58,7 +81,6 @@
 		    	start : 4,
 		    	subMenu : true
 		    });
-		    
 		});
 		</script>
 	</body>
