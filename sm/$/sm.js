@@ -4,27 +4,32 @@ $(document).ready(function(){
         duration: 500,
         easing : 'easeInOutSine',
         animationStart : function(toIndex){
+        if($.support.boxModel) {
             var $backShadow = $('.backShadow');
-            $backShadow.fadeOut(this.duration/4);
+                $backShadow.fadeOut(this.duration/4);
+        }
         },
         animationComplete : function(toIndex){
+        if($.support.boxModel) {
             var $backShadow = $('.backShadow');
             $backShadow.eq(toIndex).fadeIn(this.duration/2);
         }
+        }
     });
-    var $logo = $('#logo');
-    var $backToTop = $('#back_to_top');
-    var scrollTop = $(window).scrollTop();
-    var $navItem = $('.nav-item');
-    var $optionsWrap = $('.options_wrap');
-    var $anchor = $('.anchor');
-    var $htmlBody = $('html, body');
-    var $demoInner = $('#demo_inner');
-    var $demoHeight = $demoInner.outerHeight();
-    var $gotoUp     = $('.gotoup')
+    var $logo = $('#logo'),
+        $backToTop = $('#back_to_top'),
+        scrollTop = $(window).scrollTop(),
+        $navItem = $('.nav-item'),
+        $optionsWrap = $('.options_wrap'),
+        $anchor = $('.anchor'),
+        $htmlBody = $('html, body'),
+        $demoInner = $('#demo_inner'),
+        $demoHeight = $demoInner.outerHeight(),
+        $gotoUp     = $('.gotoup');
     var params = {
-        duration  : 400,
+        duration  : 1000,
         compSize  : 65,
+        easing    : 'easeInOutQuart',
         classNav  : 'current',
         classLink : 'active'
     }
@@ -39,16 +44,16 @@ $(document).ready(function(){
         var $thisWrap   = $(this).parent();
         var thatHash    = $(this).data('hash');
         var thisWrapTop = $thisWrap.offset().top - params.compSize;
-        if (!($thisWrap.hasClass('current'))) {
-            $optionsWrap.removeClass('current');
-            $thisWrap.addClass('current');
+        if (!($thisWrap.hasClass(params.classNav))) {
+            $optionsWrap.removeClass(params.classNav);
+            $thisWrap.addClass(params.classNav);
             $htmlBody.animate({ scrollTop: thisWrapTop }, {
                 duration : params.duration,
+                easing   : params.easing,
                 complete : function() {
                     document.location.hash = thatHash;
                 }
             });
-            
             return false;
         } else {
             return false;            
@@ -61,8 +66,8 @@ $(document).ready(function(){
     };
     var switchMenu = function(nameData) {
         var $navItem = $('.nav-item');
-            $navItem.removeClass('active');
-            $('[data-item='+nameData+']').addClass('active');
+            $navItem.removeClass(params.classLink);
+            $('[data-item='+nameData+']').addClass(params.classLink);
     };
     var dataPos = function (dataPos){
         var dataP = $('[data-name='+dataPos+']').position();
@@ -70,10 +75,15 @@ $(document).ready(function(){
         return dataNamepos;
     };
     $navItem.click(function(){
-        if(!($(this).hasClass('active'))) {
+        if(!($(this).hasClass(params.classLink))) {
             var posName  = $(this).data('item').toString();
-            $htmlBody.animate({ scrollTop: dataPos(posName) }, params.duration);
-            document.location.hash = '';
+            $htmlBody.animate({ scrollTop: dataPos(posName) }, {
+                duration : params.duration,
+                easing   : params.easing,
+                complete : function() {
+                    document.location.hash = '/#';
+                }
+        });
         }
         return false;
     });
@@ -92,7 +102,7 @@ $(document).ready(function(){
             });
         }
         if (scrollTop < dataPos('this')) {
-            $navItem.removeClass('active');
+            $navItem.removeClass(params.classLink);
         }
         else if (scrollTop < dataPos('examples') && scrollTop >= dataPos('this')) {
             switchMenu('this');

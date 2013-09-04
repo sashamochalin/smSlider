@@ -12,27 +12,22 @@
 		<link rel="shortcut icon" href="http://sashamochalin.github.io/smSlider/favicon.ico" type="image/x-icon" />
 		<link rel="stylesheet" type="text/css" href="sm/css/sm.css" />
 		<link rel="stylesheet" type="text/css" href="smSlider/smslider.css" />
-		<link href='http://fonts.googleapis.com/css?family=PT+Sans' rel='stylesheet' type='text/css'>
-		<script type="text/javascript" src="http://code.jquery.com/jquery-1.9.0.min.js"></script>
-		<script type="text/javascript" src="sm/$/jquery.easing-1.3.pack.js"></script>
-		<script type="text/javascript" src="smSlider/jquery.smslider.min.js"></script>
-		<script type="text/javascript" src="sm/$/sm.js"></script>
 	</head>
 	<body>
-		<div id="menu">
+		<nav id="menu">
 			<div id="menu_inner">
-				<div id="menu_inner-inner">
+				<div id="menu_inner-in">
 					<i id="logo" class="logo small gotoup"><img src="sm/img/logoSmall.png" /></i>
 					<ul class="nav right">
-						<li><a class="nav-item" data-item="this" href="#"><span>слайдер</span></a></li>
-						<li><a class="nav-item" data-item="examples" href="#"><span>примеры</span></a></li>
-						<li><a class="nav-item" data-item="setup" href="#"><span>установка</span></a></li>
-						<li><a class="nav-item" data-item="api" href="#"><span>api</span></a></li>
+						<li><span class="nav-item" data-item="this"><i>слайдер</i></span></li>
+						<li><span class="nav-item" data-item="examples"><i>примеры</i></span></li>
+						<li><span class="nav-item" data-item="setup"><i>установка</i></span></li>
+						<li><span class="nav-item" data-item="api"><i>api</i></span></li>
 					</ul>
 				</div>
 			</div>
-		</div>
-		<div id="demo">
+		</nav>
+		<section id="demo">
 			<div id="demo_inner">
 				<img src="sm/img/stuff/pic0-back.png" class="backShadow" style="display:inline-block" />
 				<img src="sm/img/stuff/pic1-back.png" class="backShadow" />
@@ -55,8 +50,8 @@
 					</ul>
 				</div>
 			</div>
-		</div>
-		<div id="stuff">
+		</section>
+		<section id="stuff">
 			<div class="part">
 				<h2 class="tAnchor" data-name="this">smSlider</h2>
 
@@ -399,19 +394,49 @@
 </pre>
              	</div>
 			</div>
-		</div>
-		<div id="footer">
+		</section>
+		<footer id="footer">
 		<i id="back_to_top" class="gotoup">&uarr;</i>
 			<div id="footer_inner">
 			<ul>
 				<li><a href="mailto:sashamochalin@gmail.com">@</a></li>
-				<li class="middle">© <code class="elemcode gotoup">.smSlider()</code>
+				<li class="middle">© <code class="elemcode gotoup cursorUp">.smSlider()</code>
 				<span class="date">2013 &mdash; ...</span></li>
 				<li class="right">
 					<a class="elemcode" href="https://github.com/sashamochalin/smSlider">GitHub</a>
 				</li>
 			</ul>
 			</div>
-		</div>
+		</footer>
+		<!-- Yandex.Metrika counter -->
+		<script type="text/javascript">
+		(function (d, w, c) {
+		    (w[c] = w[c] || []).push(function() {
+		        try {
+		            w.yaCounter22230172 = new Ya.Metrika({id:22230172,
+                    clickmap:true,
+                    trackLinks:true,
+                    accurateTrackBounce:true});
+		        } catch(e) { }
+		    });
+		    var n = d.getElementsByTagName("script")[0],
+		        s = d.createElement("script"),
+		        f = function () { n.parentNode.insertBefore(s, n); };
+		    s.type = "text/javascript";
+		    s.async = true;
+		    s.src = (d.location.protocol == "https:" ? "https:" : "http:") + "//mc.yandex.ru/metrika/watch.js";
+
+		    if (w.opera == "[object Opera]") {
+		        d.addEventListener("DOMContentLoaded", f, false);
+		    } else { f(); }
+		})(document, window, "yandex_metrika_callbacks");
+		</script>
+		<noscript><div><img src="//mc.yandex.ru/watch/22230172" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+		<!-- /Yandex.Metrika counter -->
+		<script type="text/javascript" src="http://code.jquery.com/jquery-1.9.0.min.js"></script>
+		<script type="text/javascript" src="sm/$/jquery.easing-1.3.pack.js"></script>
+		<script type="text/javascript" src="sm/$/modernizr.custom.js"></script>
+		<script type="text/javascript" src="smSlider/jquery.smslider.min.js"></script>
+		<script type="text/javascript" src="sm/$/sm.js"></script>
 	</body>
 </html>

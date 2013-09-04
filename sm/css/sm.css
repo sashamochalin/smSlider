@@ -1,3 +1,10 @@
+@font-face {
+  font-family: 'PT Sans';
+  font-style: normal;
+  font-weight: 400;
+  src: local('PT Sans'), local('PTSans-Regular'), url(http://themes.googleusercontent.com/static/fonts/ptsans/v5/LKf8nhXsWg5ybwEGXk8UBQ.woff) format('woff');
+}
+
 * {
 	margin: 0px;
 	padding: 0px;
@@ -36,7 +43,6 @@ ul {
 	list-style-position: inside;
 }
 
-/*default*/
 .right {
     float: right;
 }
@@ -44,6 +50,10 @@ ul {
 .pseudo {
 	border-bottom: 1px dashed;
 	text-decoration: none;
+}
+
+.cursorUp {
+	cursor:n-resize;
 }
 
 .elemcode {
@@ -65,7 +75,7 @@ i.elemcode {
 }
 
 #demo {
-	background : url(../img/top.gif);
+	background : url(../img/top.gif) #2d2d2d;
 	overflow: hidden;
 	padding: 40px 0px 50px;
 	min-width: 1010px;
@@ -116,17 +126,18 @@ i.elemcode {
     border-top: 1px #525252 solid;
 }
 
-#menu_inner-inner {
+#menu_inner-in {
 	margin: 0 auto;
 	width: 960px;
     padding: 15px 0 0 0
 }
 
 .nav {
-	font-family: 'PT Sans', sans-serif;
+	font-family: 'PT Sans', Arial, sans-serif;
 	font-size: 15px;
 	margin: 5px 0 0 0;
 	position: relative;
+	top: 0px;
 }
 
 .nav li {
@@ -134,7 +145,7 @@ i.elemcode {
 	list-style: none;
 }
 
-.nav a {
+.nav span {
 	color: #fdfdfd;
 	font-size: 0.9em;
 	margin: 0px 0px 0px 20px;
@@ -142,9 +153,10 @@ i.elemcode {
 	text-decoration: none;
 	text-shadow: 1px 1px 1px #000;
 	position: relative;
+	cursor: pointer;
 }
 
-.nav a:hover {
+.nav span:hover {
 	-moz-transition: color 0.3s ease;
 	-ms-transition: color 0.3s ease;
 	-o-transition: color 0.3s ease;
@@ -154,24 +166,29 @@ i.elemcode {
     text-shadow: 1px 1px -1px #000
 }
 
-a:active {
+.nav span:active {
 	top: 1px;	
 }
 
-.nav a.active:active {
+.nav span.active:active {
 	top: 0px;
 }
 
-.nav a.active span {
+.nav span i {
+	font-style: normal;
+}
+
+.nav span.active i {
 	-moz-transition: color 0.3s ease;
 	-ms-transition: color 0.3s ease;
 	-o-transition: color 0.3s ease;
 	-webkit-transition: color 0.3s ease;
 	transition: color 0.3s ease;
 	color: #ff7766;
+
 }
 
-.nav a.active:hover, .nav a.active span:hover {
+.nav span.active:hover, .nav span.active i:hover {
     cursor: default;
 }
 
@@ -315,7 +332,6 @@ a:active {
   background: linear-gradient(top, #fffbd7, #fff7b5);
   border-color: silver;
   box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.2);
-  -moz-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.2);
 }
 
 .btn .icon {
@@ -374,9 +390,20 @@ a:active {
 #back_to_top {
 	position: absolute;
 	left: 5px;
-	top: 15px;
-	font-size: 20px;
-	font-weight: bold;
-	color: #ccc;
+	top: 0px;
+	color: #c1c1c1;
 	cursor: pointer;
+	background: #ebebeb;
+	padding: 5px 20px 10px;
+	font-weight: bold;
+	font-size: 2em;
+	overflow: hidden;
+	border: #c0c0c0;
+	border-radius: 10px;
+	font-style: normal;
+}
+
+#back_to_top:hover {
+	color: #9e9e9e;
+	background: #dfdfdf;
 }

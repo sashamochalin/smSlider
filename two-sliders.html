@@ -13,26 +13,6 @@
 		<link rel="stylesheet" type="text/css" href="sm/css/demo.css" />
 		<link rel="stylesheet" type="text/css" href="sm/css/sm.css" />
 		<link rel="stylesheet" type="text/css" href="smSlider/smslider.css" />
-		
-		<script type="text/javascript" src="http://code.jquery.com/jquery-1.9.1.js"></script>
-		<script type="text/javascript" src="smSlider/jquery.smslider.min.js"></script>
-		<script type="text/javascript">
-		$(document).ready(function(){
-		    var $fSlider = $('#first-slider');
-		    var $sSlider = $('#second-slider');
-		    
-		    $fSlider.smSlider({
-		    	start : 2,
-		    	subMenu : true,
-		    	typeCtrl : 'numeric'
-		    });
-		    $sSlider.smSlider({
-		    	start : 4,
-		    	subMenu : true
-		    });
-		    
-		});
-		</script>
 	</head>
 	<body>
 		<a href="index.html" style="position: relative; top: -40px; left: 25px;">&larr; .smSlider()</a>
@@ -62,7 +42,24 @@
 				<li style="background:FloralWhite">5</li>
 			</ul>
 		</div>
-
-
+		<script type="text/javascript" src="http://code.jquery.com/jquery-1.9.1.js"></script>
+		<script type="text/javascript" src="smSlider/jquery.smslider.min.js"></script>
+		<script type="text/javascript">
+		$(document).ready(function(){
+		    var $fSlider = $('#first-slider');
+		    var $sSlider = $('#second-slider');
+		    
+		    $fSlider.smSlider({
+		    	start : 2,
+		    	subMenu : true,
+		    	typeCtrl : 'numeric'
+		    });
+		    $sSlider.smSlider({
+		    	start : 4,
+		    	subMenu : true
+		    });
+		    
+		});
+		</script>
 	</body>
 </html>
