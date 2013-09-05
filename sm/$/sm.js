@@ -33,13 +33,14 @@ $(document).ready(function(){
         classNav  : 'current',
         classLink : 'active'
     }
+    var removeHash = function() { 
+            window.history.pushState("", document.title, window.location.pathname);
+        }
     var toTop = function() {
         $htmlBody.animate({ scrollTop: 0 }, {
                 duration : params.duration,
                 easing   : params.easing,
-                complete : function() {
-                    document.location.href.substr(0, document.location.href.indexOf('#'));
-                }
+                complete : removeHash
             })
     }
     $gotoUp.click(function(){
@@ -85,9 +86,7 @@ $(document).ready(function(){
             $htmlBody.animate({ scrollTop: dataPos(posName) }, {
                 duration : params.duration,
                 easing   : params.easing,
-                complete : function() {
-                    document.location.href.substr(0, document.location.href.indexOf('#'));
-                }
+                complete : removeHash
         });
         }
         return false;
