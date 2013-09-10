@@ -1,5 +1,5 @@
 # smSlider
-This is simple [JQuery](http://jquery.com) slider plugin.
+This is simple [JQuery](http://jquery.com) slider plugin
 
 ## Installation
 * Download or clone plugin in your project:
@@ -116,7 +116,7 @@ $ git clone git@github.com:sashamochalin/smSlider.git ./smslider/
 ``` javascript
     // turn on additional controls
     $elem.smSlider({
-        subMenu : 'sm_submenu-item'
+        subMenu : false
     });
 ```
 - subMenuClass `string`
@@ -182,7 +182,7 @@ $ git clone git@github.com:sashamochalin/smSlider.git ./smslider/
     // callback function, called with start animation
     $elem.smSlider({
         animationStart : function() {
-            //do something
+            //do something...
         }
     });
 ```
@@ -192,7 +192,7 @@ $ git clone git@github.com:sashamochalin/smSlider.git ./smslider/
     // callback function, called with complete animation
     $elem.smSlider({
         animationComplete : function() {
-            //do something
+            //do something...
         }
     });
 ```
