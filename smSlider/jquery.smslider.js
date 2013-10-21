@@ -1,4 +1,4 @@
-/*
+/*!
  * smSlider 0.1
  * http://sashamochalin.github.io/smSlider/
  *
@@ -26,7 +26,7 @@
         duration          : 600,
         flexible          : false,
         animationStart    : function(){},
-        animationComplete : function(){}  
+        animationComplete : function(){}        
   };
   var options = $.extend(defaults, options);
   return this.each(function() {
@@ -36,14 +36,15 @@
             clickable = false;
             var moveNext = smSlideWidth;
             var movePrev = -1*moveNext;
-            if (direction == 'next') {
+            if(direction == 'next') {
                 currPos = movePrev;
                 nextPos = moveNext; 
             } else {
                 currPos = moveNext;
                 nextPos = movePrev;
             }
-            if (options.transition != 'fader') {
+
+            if(options.transition != 'fader') {
                 $smSliderInner.children('.'+options.children+'.'+options.activeClass).stop().animate({
                     'left' : currPos
                 }, {
@@ -72,7 +73,7 @@
                     complete : function(){
                         $(this).removeClass(options.activeClass);
                         if (options.animationComplete) {
-                            options.animationComplete(toIndex) 
+                            options.animationComplete(toIndex)
                         }
                     }
                 });
@@ -80,22 +81,21 @@
                     duration : options.duration,
                     easing   : options.easing,
                     complete : function(){
-                        clickable = true;                       
+                        clickable = true;             
                     }
                 }).addClass(options.activeClass);
             } 
             if(options.animationStart) {
                 options.animationStart(toIndex)
             }
-            if (options.pagination) {
+            if(options.pagination) {
                 $smNavItem.removeClass(options.activeClass);
                 $smNavItem.eq(toIndex).addClass(options.activeClass);
             }
-            if (options.subMenu) {
+            if(options.subMenu) {
                 $subMenu.removeClass(options.activeClass);
                 $subMenu.eq(toIndex).addClass(options.activeClass);
             }
-
         } else {
             return false;
         }
@@ -109,7 +109,7 @@
         });
     };
     var $smSliderInner = $smSlider.children('ul').addClass(options.innerBlock);
-        $smSliderInner.css({'height'   : smSlideHeight,
+        $smSliderInner.css({'height'   :smSlideHeight,
                             'overflow' : 'hidden',
                             'position' : 'relative',
                             'width'    : '100%'
@@ -123,9 +123,9 @@
     }
         $smSlide.appendTo($smSliderInner);
         $smSlide.eq(cIndex).addClass(options.activeClass);
-    if (smSlideSizer > 1) {
+    if(smSlideSizer > 1) {
         var $elemCtrl = $('<i/>');
-        if (options.autoArr) {
+        if(options.autoArr) {
             var $smPrev = $elemCtrl.clone().addClass(options.prev);
             var $smNext = $elemCtrl.clone().addClass(options.next);
             $smPrev.appendTo($smSlider);
@@ -134,11 +134,11 @@
             var $smPrev = $('.'+options.prev);
             var $smNext = $('.'+options.next);
         }
-        if (options.pagination) {
+        if(options.pagination) {
             var $smNav = $('<ul/>').addClass('sm_nav');
             var $smNavItem = $('<li/>');
             $smNav.appendTo($smSlider);
-            if (options.typeCtrl != 'numeric') {
+            if(options.typeCtrl != 'numeric') {
                 for (i=0; i < smSlideSizer; i++) {
                     $smNavItem.clone().data({
                             'index' : i
@@ -158,12 +158,11 @@
             var $smNavItem = $smSlider.find('.sm_nav-item');
             $smNavItem.eq(cIndex).addClass(options.activeClass);
         }
-    if (options.subMenu) {
+    if(options.subMenu) {
         var $subMenu = $('.' + options.subMenuClass);
             $subMenu.eq(cIndex).addClass(options.activeClass);
-       }        
-    }
-    if(options.autoPlay && (smSlideSizer > 1)) {
+       }
+    if(options.autoPlay) {
         var timeOut = null;
         var autoPlay = function(){
             cIndex++;
@@ -181,18 +180,16 @@
             })
         }
     };
-
-    if(smSlideSizer > 1) {
-    $smPrev.bind('click', function(){
+    $smPrev.on('click', function(){
         if (clickable) {
             cIndex--
-            if (cIndex < 0) {
+            if(cIndex < 0) {
                 cIndex = smSlideSizer - 1;
             }
             slideMove(cIndex, 'prev');
         }
     });
-    $smNext.bind('click', function(){
+    $smNext.on('click', function(){
         if (clickable) {
             cIndex++
             if (cIndex >= smSlideSizer) {
@@ -203,7 +200,7 @@
     });
     if (options.pagination) {
         $smNavItem.on('click', function(){
-            if (clickable) {
+            if(clickable) {
                 navIndex = $(this).data('index');
                 if(navIndex > cIndex) {
                     direction = 'next'
@@ -218,8 +215,8 @@
         })
     };
     if (options.subMenu) {
-        $subMenu.bind('click', function(){
-            if (clickable) {
+        $subMenu.on('click', function(){
+            if(clickable) {
                 subIndex = $(this).data('index');
                 if(subIndex > cIndex) {
                     direction = 'next'
