@@ -1,6 +1,7 @@
 $(document).ready(function(){
     var $smSlider = $('#sm_slider');
     $smSlider.smSlider({
+        autoPlay : true,
         duration: 500,
         easing : 'easeInOutSine',
         animationStart : function(toIndex){
@@ -17,17 +18,18 @@ $(document).ready(function(){
         }
     });
     var $logo = $('#logo'),
-        $backToTop = $('#back_to_top'),
-        scrollTop = $(window).scrollTop(),
-        $navItem = $('.nav-item'),
+        $backToTop   = $('#back_to_top'),
+        scrollTop    = $(window).scrollTop(),
+        $navItem     = $('.nav-item'),
         $optionsWrap = $('.options_wrap'),
-        $anchor = $('.anchor'),
-        $htmlBody = $('html, body'),
-        $demoInner = $('#demo_inner'),
-        $demoHeight = $demoInner.outerHeight(),
-        $gotoUp     = $('.gotoup');
+        $anchor      = $('.anchor'),
+        $htmlBody    = $('html, body'),
+        $demoInner   = $('#demo_inner'),
+        $demoHeight  = $demoInner.outerHeight(),
+        $gotoUp      = $('.gotoup');
+        //listCurr   = false;
     var params = {
-        duration  : 1000,
+        duration  : 800,
         compSize  : 65,
         easing    : 'swing',
         classNav  : 'current',
@@ -41,7 +43,9 @@ $(document).ready(function(){
                 duration : params.duration,
                 easing   : params.easing,
                 complete : removeHash
-            })
+            });
+        $navItem.removeClass(params.classLink);
+        $optionsWrap.removeClass(params.classNav);
     }
     $gotoUp.click(function(){
         toTop();
@@ -88,7 +92,8 @@ $(document).ready(function(){
                 easing   : params.easing,
                 complete : removeHash
         });
-        }
+        };
+        $optionsWrap.removeClass(params.classNav);
         return false;
     });
     $(window).scroll(function() {
