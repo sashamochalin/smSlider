@@ -11,9 +11,9 @@ $ git clone git@github.com:sashamochalin/smSlider.git ./smslider/
 * Include scripts and styles:
 
 ``` html
-<link type="text/css"  rel="stylesheet" href="smslider/sm.slider.css" />
+<link type="text/css"  rel="stylesheet" href="smslider/smslider.css" />
 <script type="text/javascript" src="http://code.jquery.com/jquery-latest.min.js"></script>
-<script type="text/javascript" src="smslider/jquery.sm.slider.min.js"></script>
+<script type="text/javascript" src="smslider/jquery.smslider.min.js"></script>
 ```		
 		
 * Create html with your slides:
