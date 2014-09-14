@@ -1,0 +1,368 @@
+<!DOCTYPE HTML><html><head><title>.smSlider()</title><meta charset="utf-8"><meta http-equiv="X-UA-Compatible" content="IE=EmulateIE7, IE=9" /><meta property="og:title" content=".smSlider()"><meta property="og:description" content="smSlider — слайдер для веба ~ 3 kb"><meta property="og:url" content="http://sashamochalin.github.io/smSlider/"><meta property="og:image" content="http://sashamochalin.github.io/smSlider/smSlider.jpg"><link rel="icon" href="http://sashamochalin.github.io/smSlider/favicon.ico" type="image/x-icon" /><link rel="shortcut icon" href="http://sashamochalin.github.io/smSlider/favicon.ico" type="image/x-icon" /><link rel="stylesheet" type="text/css" href="sm/css/sm.css" /><link rel="stylesheet" type="text/css" href="smSlider/css/smslider.css" /></head><body><div id="menu"><div id="menu_inner"><div id="menu_inner-in"><i id="logo" class="logo small gotoup"><img src="sm/img/logoSmall.png" /></i><ul class="nav right"><li><span class="nav-item" data-item="this"><i>слайдер</i></span></li><li><span class="nav-item" data-item="examples"><i>примеры</i></span></li><li><span class="nav-item" data-item="setup"><i>установка</i></span></li><li><span class="nav-item" data-item="api"><i>api</i></span></li></ul></div></div></div><div id="demo"><div id="demo_inner"><img src="sm/img/stuff/pic0-back.png" class="backShadow" style="display:inline-block" /><img src="sm/img/stuff/pic1-back.png" class="backShadow" /><img src="sm/img/stuff/pic2-back.png" class="backShadow" /><img src="sm/img/stuff/pic3-back.png" class="backShadow" /><div class="sm_slider" id="sm_slider"><ul><li><img src="sm/img/stuff/pic0.jpg" /></li><li><img src="sm/img/stuff/pic1.jpg" /></li><li><img src="sm/img/stuff/pic2.jpg" /></li><li><img src="sm/img/stuff/pic3.jpg" /></li></ul></div></div></div>
+		<div id="stuff">
+			<div class="part">
+                <h2 class="tAnchor" data-name="this">smSlider</h2>
+                <div class="part_in">
+				<p>
+					smSlider — слайдер для веба.
+					<br/>
+					Весит примерно 3 kb
+				</p>
+				<p>
+					Использует <a href="http://jquery.org/">jQuery</a>
+					и может расширять анимацию с <a href="http://gsgd.co.uk/sandbox/jquery/easing/">jQuery Easing</a>.
+				</p>
+				<div id="buttons">
+				<a class="btn downbtn" href="https://github.com/sashamochalin/smSlider/archive/master.zip">
+				<i class="icon icon-download"></i>
+				.zip</a>
+				<a class="btn btn-large btn-github" href="https://github.com/login?return_to=%2Fsashamochalin%2FsmSlider" target="_blank">
+				    <i class="icon icon-github"></i>
+				    Fork on GitHub
+				</a>
+				</div>
+                
+                <div class="yandex_money_block">
+                <div class="yandex_money_block_in">
+                    <i class="b-item__favicon" style="background-position: 0 -0px"></i>
+                    <span>Яндекс.Деньги:<br>
+                    <a href="https://money.yandex.ru/direct-payment.xml?receiver=41001312957268">41001312957268</a></span>
+                </div>
+                </div>
+            </div>
+			</div>
+			<div class="part">
+				<h2 class="tAnchor" data-name="examples">Примеры</h2>
+				<div class="part_inner">
+					<ul>
+						<li><a href="full-page.html">Полностраничный слайдер</a></li>
+						<li><a href="fader.html">Фэйдер</a></li>
+						<li><a href="two-sliders.html">Пара слайдеров</a></li>
+					</ul>
+				</div>
+			</div>
+			<div class="part">
+				<h2 class="tAnchor" data-name="setup">Установка</h2>
+				<p>
+					1. Приаттачить на страницу jQuery и файлы из <a class="pseudo" href="https://github.com/sashamochalin/smSlider/archive/master.zip">архива</a>:
+				</p>
+				<div class="code">
+<pre style="color:#586e75"><span style="color:#93a1a1">&lt;</span><span style="color:#268bd2;font-weight:700">link</span> <span style="color:#93a1a1">type</span>=<span style="color:#269186"><span style="color:#269186">"</span>text/css<span style="color:#269186">"</span></span>  <span style="color:#93a1a1">rel</span>=<span style="color:#269186"><span style="color:#269186">"</span>stylesheet<span style="color:#269186">"</span></span> <span style="color:#93a1a1">href</span>=<span style="color:#269186"><span style="color:#269186">"</span>smslider/css/smslider.css<span style="color:#269186">"</span></span><span style="color:#93a1a1"> /></span>
+<span style="color:#93a1a1">&lt;</span><span style="color:#268bd2;font-weight:700">script</span> <span style="color:#93a1a1">type</span>=<span style="color:#269186"><span style="color:#269186">"</span>text/javascript<span style="color:#269186">"</span></span> <span style="color:#93a1a1">src</span>=<span style="color:#269186"><span style="color:#269186">"</span>http://code.jquery.com/jquery-latest.min.js<span style="color:#269186">"</span></span><span style="color:#93a1a1">>&lt;/</span><span style="color:#268bd2;font-weight:700">script</span><span style="color:#93a1a1">></span>
+<span style="color:#93a1a1">&lt;</span><span style="color:#268bd2;font-weight:700">script</span> <span style="color:#93a1a1">type</span>=<span style="color:#269186"><span style="color:#269186">"</span>text/javascript<span style="color:#269186">"</span></span> <span style="color:#93a1a1">src</span>=<span style="color:#269186"><span style="color:#269186">"</span>smslider/jquery.sm.slider.min.js<span style="color:#269186">"</span></span><span style="color:#93a1a1">>&lt;/</span><span style="color:#268bd2;font-weight:700">script</span><span style="color:#93a1a1">></span>
+</pre>
+				</div>
+				<p>2. Подготовить html:</p>
+				<div class="code">
+<pre style="color:#586e75"><span style="color:#93a1a1">&lt;</span><span style="color:#268bd2;font-weight:700">div</span> <span style="color:#93a1a1">id</span><span style="color:#708284">=</span><span style="color:#269186"><span style="color:#269186">"</span>sm_slider<span style="color:#269186">"</span></span><span style="color:#93a1a1">></span>
+    <span style="color:#93a1a1">&lt;</span><span style="color:#268bd2;font-weight:700">ul</span><span style="color:#93a1a1">></span>
+        <span style="color:#93a1a1">&lt;</span><span style="color:#268bd2;font-weight:700">li</span><span style="color:#93a1a1">></span>...<span style="color:#93a1a1">&lt;/</span><span style="color:#268bd2;font-weight:700">li</span><span style="color:#93a1a1">></span>
+        <span style="color:#93a1a1">&lt;</span><span style="color:#268bd2;font-weight:700">li</span><span style="color:#93a1a1">></span>...<span style="color:#93a1a1">&lt;/</span><span style="color:#268bd2;font-weight:700">li</span><span style="color:#93a1a1">></span>
+        <span style="color:#93a1a1">&lt;</span><span style="color:#268bd2;font-weight:700">li</span><span style="color:#93a1a1">></span>...<span style="color:#93a1a1">&lt;/</span><span style="color:#268bd2;font-weight:700">li</span><span style="color:#93a1a1">></span>
+    <span style="color:#93a1a1">&lt;/</span><span style="color:#268bd2;font-weight:700">ul</span><span style="color:#93a1a1">></span>
+<span style="color:#93a1a1">&lt;/</span><span style="color:#268bd2;font-weight:700">div</span><span style="color:#93a1a1">></span>
+</pre>
+				</div>
+				<p>3. Запустить слайдер:</p>
+				<div class="code">
+<pre style="color:#586e75"><span style="color:#859900">$</span><span style="color:#93a1a1">(</span><span style="color:#859900">document</span><span style="color:#93a1a1">)</span>.ready<span style="color:#93a1a1">(</span><span style="color:#268bd2">function</span><span style="color:#93a1a1">(</span><span style="color:#93a1a1">)</span><span style="color:#268bd2">{</span>
+    <span style="color:#859900">$</span><span style="color:#93a1a1">(</span><span style="color:#269186"><span style="color:#c60000">'</span>#sm_slider<span style="color:#c60000">'</span></span><span style="color:#93a1a1">)</span>.smSlider<span style="color:#93a1a1">(</span><span style="color:#93a1a1">)</span>
+<span style="color:#268bd2">}</span><span style="color:#93a1a1">)</span>
+</pre>
+				</div>
+			</div>
+			<div class="part last">
+				<h2 class="tAnchor" data-name="api">API</h2>
+				<p>Следующие настройки можно переопределять:</p>
+                <div class="options_wrap" id="start"><i data-hash="#start" class="anchor">+</i>
+                    <h4>start <span><code class="elemcode">Number</code></span></h4>
+                    <p>стартовый слайд</p>
+                    <div class="code_field">
+                    	<div class="code">
+<pre style="color:#586e75">$<span style="color:#536871">elem<span style="color:#268bd2">.smSlider</span>(</span><span style="color:#5a74cf">{</span>
+    <span style="color:#a57800">start</span> <span style="color:#269186"><span style="color:#536871">:</span> <span style="color:#269186">0</span>
+</span>});
+</pre>
+                    	</div>
+                    </div>
+                    <p class="small">значение по умолчанию: <i class="elemcode">0</i></p>
+                </div>
+				<div class="options_wrap" id="transition"><i data-hash="#transition" class="anchor">+</i>
+	                <h4>transition <span><code class="elemcode">String</code></span></h4>
+	                    <p>тип анимации смены слайда</p>
+	                <div class="code_field">
+                    	<div class="code">
+<pre style="color:#586e75">$<span style="color:#536871">elem<span style="color:#268bd2">.smSlider</span>(</span><span style="color:#5a74cf">{</span>
+    <span style="color:#a57800">transition</span> <span style="color:#269186"><span style="color:#536871">:</span> <span style="color:#269186">'animate'</span>
+</span>});
+</pre>
+                    	</div>
+	                </div>
+					<p class="small">значения: <i class="elemcode">'animate'</i>&nbsp;|&nbsp;<i class="elemcode">'fader'</i></p>
+				</div>
+				<div class="options_wrap" id="activeClass"><i data-hash="#activeClass" class="anchor">+</i>
+	                <h4>activeClass <span><code class="elemcode">String</code></span></h4>
+	                    <p>css-класс для текущего слайда и контролов навигации</p>
+	                <div class="code_field">
+                    	<div class="code">
+<pre style="color:#586e75">$<span style="color:#536871">elem<span style="color:#268bd2">.smSlider</span>(</span><span style="color:#5a74cf">{</span>
+    <span style="color:#a57800">activeClass</span> <span style="color:#269186"><span style="color:#536871">:</span> <span style="color:#269186">'active'</span>
+</span>});
+</pre>
+                    	</div>
+	                </div>
+					<p class="small">значение по умолчанию: <i class="elemcode">'active'</i></p>
+				</div>
+
+                <div class="options_wrap" id="autoArr"><i data-hash="#autoArr" class="anchor">+</i>
+                    <h4>autoArr <span><span><code class="elemcode">Boolean</code></span></h4>
+                        <p>автоматическая генерация контролов — стрелок на предыдущий и следующий слайды</p>
+                    <div class="code_field">
+                    	<div class="code">
+<pre style="color:#586e75">$<span style="color:#536871">elem<span style="color:#268bd2">.smSlider</span>(</span><span style="color:#5a74cf">{</span>
+    <span style="color:#a57800">autoArr</span> <span style="color:#269186"><span style="color:#536871">:</span> <span style="color:#269186">true</span>
+</span>});
+</pre>
+                    	</div>
+                    </div>
+                </div>
+                <div class="options_wrap" id="prev"><i data-hash="#prev" class="anchor">+</i>
+                    <h4>prev <span><code class="elemcode">String</code></span></h4>
+                        <p>css-класс контрола для перехода на предыдущий слайд</p>
+                    <div class="code_field">
+                    	<div class="code">
+<pre style="color:#586e75">$<span style="color:#536871">elem<span style="color:#268bd2">.smSlider</span>(</span><span style="color:#5a74cf">{</span>
+    <span style="color:#a57800">prev</span> <span style="color:#269186"><span style="color:#536871">:</span> <span style="color:#269186">'sm_prev'</span>
+</span>});
+</pre>
+                    	</div>
+                    </div>
+                </div>
+                <div class="options_wrap" id="next"><i data-hash="#next" class="anchor">+</i>
+                    <h4>next <span><code class="elemcode">String</code></span></h4>
+                        <p>css-класс контрола для перехода на следующий слайд</p>
+                    <div class="code_field">
+                    	<div class="code">
+<pre style="color:#586e75">$<span style="color:#536871">elem<span style="color:#268bd2">.smSlider</span>(</span><span style="color:#5a74cf">{</span>
+    <span style="color:#a57800">next</span> <span style="color:#269186"><span style="color:#536871">:</span> <span style="color:#269186">'sm_next'</span>
+</span>});
+</pre>
+                    	</div>
+                    </div>
+                </div>
+                <div class="options_wrap" id="pagination"><i data-hash="#pagination" class="anchor">+</i>
+                    <h4>pagination <span><code class="elemcode">Boolean</code></span></h4>
+                        <p>автоматическая генерация контролов навигации</p>
+                    <div class="code_field">
+                    	<div class="code">
+<pre style="color:#586e75">$<span style="color:#536871">elem<span style="color:#268bd2">.smSlider</span>(</span><span style="color:#5a74cf">{</span>
+    <span style="color:#a57800">pagination</span> <span style="color:#269186"><span style="color:#536871">:</span> <span style="color:#269186">true</span>
+</span>});
+</pre>
+                    	</div>
+                    </div>
+                </div>
+                <div class="options_wrap" id="typeCtrl"><i data-hash="#typeCtrl" class="anchor">+</i>
+                    <h4>typeCtrl <span><code class="elemcode">String</code></span></h4>
+                        <p>контролы навигации — айфоновские точки или номера слайдов</p>
+	                <div class="code_field">
+                    	<div class="code">
+<pre style="color:#586e75">$<span style="color:#536871">elem<span style="color:#268bd2">.smSlider</span>(</span><span style="color:#5a74cf">{</span>
+    <span style="color:#a57800">typeCtrl</span> <span style="color:#269186"><span style="color:#536871">:</span> <span style="color:#269186">'dots'</span>
+</span>});
+</pre>
+						</div>
+                    </div>
+                    <p class="small">по умолчанию: <i class="elemcode">dots</i> — айфоновские точки | <i class="elemcode">numeric</i> — нумерация</p>
+                </div>
+                <div class="options_wrap" id="subMenu"><i data-hash="#subMenu" class="anchor">+</i>
+                    <h4>subMenu <span><code class="elemcode">Boolean</code></span></h4>
+                        <p>включение дополнительных контролов управления, могут быть описаны в любом месте документа</p>
+                    <div class="code_field">
+                    	<div class="code">
+<pre style="color:#586e75">$<span style="color:#536871">elem<span style="color:#268bd2">.smSlider</span>(</span><span style="color:#5a74cf">{</span>
+    <span style="color:#a57800">subMenu</span> <span style="color:#269186"><span style="color:#536871">:</span> <span style="color:#269186">false</span>
+</span>});
+</pre>
+                    	</div>
+                    </div>
+                </div>
+                <div class="options_wrap" id="subMenuClass"><i data-hash="#subMenuClass" class="anchor">+</i>
+                    <h4>subMenuClass <span><code class="elemcode">String</code></span></h4>
+                        <p>css-класс для дополнительных контролов</p>
+                    <div class="code_field">
+                    	<div class="code">
+<pre style="color:#586e75">$<span style="color:#536871">elem<span style="color:#268bd2">.smSlider</span>(</span><span style="color:#5a74cf">{</span>
+    <span style="color:#a57800">subMenuClass</span> <span style="color:#269186"><span style="color:#536871">:</span> <span style="color:#269186">'sm_submenu-item'</span>
+</span>});
+</pre>
+                    	</div>
+                    </div>
+                    <p class="small">Для указания номера слайда используется data-аттрибут: <i class="elemcode">data-index="n"</i>. «<i class="elemcode">n</i>» — номер слайда, начиная с нуля</p>
+                </div>
+                <div class="options_wrap" id="autoPlay"><i data-hash="#autoPlay" class="anchor">+</i>
+                    <h4>autoPlay <span><code class="elemcode">Boolean</code></span></h4>
+                        <p>автоматическая смена слайдов через заданный промежуток</p>
+                    <div class="code_field">
+                    	<div class="code">
+<pre style="color:#586e75">$<span style="color:#536871">elem<span style="color:#268bd2">.smSlider</span>(</span><span style="color:#5a74cf">{</span>
+    <span style="color:#a57800">autoPlay</span> <span style="color:#269186"><span style="color:#536871">:</span> <span style="color:#269186">true</span>
+</span>});
+</pre>
+                    	</div>
+                    </div>
+                    <p class="small">по умолчанию: <span class="elemcode">false</span></p>
+                </div>
+                <div class="options_wrap" id="duration"><i data-hash="#duration" class="anchor">+</i>
+                    <h4>duration <span><code class="elemcode">Number</code></span></h4>
+                        <p>Скорость анимации</p>
+                    <div class="code_field">
+                    	<div class="code">
+<pre style="color:#586e75">$<span style="color:#536871">elem<span style="color:#268bd2">.smSlider</span>(</span><span style="color:#5a74cf">{</span>
+    <span style="color:#a57800">duration</span> <span style="color:#269186"><span style="color:#536871">:</span> <span style="color:#269186">600</span>
+</span>});
+</pre>
+						</div>
+                    </div>
+                    <p class="small">по умолчанию: <i class="elemcode">600</i></p>
+                </div>  
+                <div class="options_wrap" id="delay"><i data-hash="#delay" class="anchor">+</i>
+                    <h4>delay <span><code class="elemcode">Number</code></span></h4>
+                        <p>задержка между автомаческой сменой слайдов</p>
+                    <div class="code_field">
+                    	<div class="code">
+<pre style="color:#586e75">$<span style="color:#536871">elem<span style="color:#268bd2">.smSlider</span>(</span><span style="color:#5a74cf">{</span>
+    <span style="color:#a57800">delay</span> <span style="color:#269186"><span style="color:#536871">:</span> <span style="color:#269186">5000</span>
+</span>});
+</pre>
+                    	</div>
+                    </div>
+                    <p class="small">по умолчанию: <i class="elemcode">5000</i>, то есть 5 секунд</p>
+                </div>  				
+                <div class="options_wrap" id="hoverPause"><i data-hash="#hoverPause" class="anchor">+</i>
+                    <h4>hoverPause <span><code class="elemcode">Boolean</code></span></h4>
+                        <p>включение паузы при наведении курсора на слайд во время автоматическоцй смены слайдов</p>
+                    <div class="code_field">
+                    	<div class="code">
+<pre style="color:#586e75">$<span style="color:#536871">elem<span style="color:#268bd2">.smSlider</span>(</span><span style="color:#5a74cf">{</span>
+    <span style="color:#a57800">hoverPause</span> <span style="color:#269186"><span style="color:#536871">:</span> <span style="color:#269186">false</span>
+</span>});
+</pre>
+						</div>
+                    </div>
+                    <p class="small">по умолчанию: <span class="elemcode">true</span></p>
+                </div>      				
+                <div class="options_wrap" id="easing"><i data-hash="#easing" class="anchor">+</i>
+                    <h4>easing <span><code class="elemcode">String</code></span></h4>
+                        <p>тип анимации</p>
+                    <div class="code_field">
+                    	<div class="code">
+<pre style="color:#586e75">$<span style="color:#536871">elem<span style="color:#268bd2">.smSlider</span>(</span><span style="color:#5a74cf">{</span>
+    <span style="color:#a57800">easing</span> <span style="color:#269186"><span style="color:#536871">:</span> <span style="color:#269186">'swing'</span>
+</span>});
+</pre>
+                    	</div>
+                    </div>
+                    <p class="small">значения: <i class="elemcode">'swing'</i>, <i class="elemcode">'linear'</i> (расширяется с jQuery easing)</p>
+                </div>
+                <div class="options_wrap" id=""><i data-hash="#flexible" class="anchor">+</i>
+                    <h4>flexible <span><code class="elemcode">Boolean</code></span></h4>
+                        <p>ширина в процентах</p>
+                    <div class="code_field">
+                    	<div class="code">
+<pre style="color:#586e75">$<span style="color:#536871">elem<span style="color:#268bd2">.smSlider</span>(</span><span style="color:#5a74cf">{</span>
+    <span style="color:#a57800">flexible</span> <span style="color:#269186"><span style="color:#536871">:</span> <span style="color:#269186">true</span>
+</span>});
+</pre>
+                    	</div>
+                    </div>
+	            <p class="small">по умолчанию: <i class="elemcode">false</i></p>
+                </div>
+                <div class="options_wrap" id="animationStart"><i data-hash="#animationStart" class="anchor">+</i>
+                    <h4>animationStart <span><code class="elemcode">Function</code></span></h4>
+                        <p>пользовательская функция, стартует вместе с анимацией</p>
+                    <div class="code_field">
+                    	<div class="code">
+<pre style="color:#586e75">$<span style="color:#536871">elem<span style="color:#268bd2">.smSlider</span>(</span><span style="color:#5a74cf">{</span>
+    <span style="color:#a57800">animationStart</span> <span style="color:#269186"><span style="color:#536871">:</span> function() {
+        <span style="color:#93a1a1">//do something</span>
+    </span>}
+});
+</pre>
+                    	</div>
+                    </div>
+                </div>
+                <div class="options_wrap" id="animationComplete"><i data-hash="#animationComplete" class="anchor">+</i>
+                    <h4>animationComplete <span><code class="elemcode">Function</code></span></h4>
+                        <p>пользовательская функция, стартует после завершения анимации</p>
+                    <div class="code_field">
+                    	<div class="code">
+<pre style="color:#586e75">$<span style="color:#536871">elem<span style="color:#268bd2">.smSlider</span>(</span><span style="color:#5a74cf">{</span>
+    <span style="color:#a57800">animationComplete</span> <span style="color:#269186"><span style="color:#536871">:</span> function() {
+        <span style="color:#93a1a1">//do something</span>
+    </span>}
+});
+</pre>
+                    	</div>
+                    </div>
+                </div>
+             	<p>Комбинируются настройки так:</p>
+             	<div class="code">
+<pre style="color:#586e75"><span style="color:#859900">$</span>elem.smSlider<span style="color:#93a1a1">(</span><span style="color:#268bd2">{</span>
+    duration       : <span style="color:#269186">500</span>,
+    autoPlay       : <span style="color:#b58900">true</span>,
+    delay          : <span style="color:#269186">8000</span>,
+    subMenu        : <span style="color:#b58900">true</span>,
+    subMenuClass   : <span style="color:#269186"><span style="color:#c60000">'</span>more-item<span style="color:#c60000">'</span></span>,
+    <span style="color:#a57800">animationStart</span> : <span style="color:#268bd2">function</span>(toIndex)<span style="color:#268bd2">{</span>
+        <span style="color:#93a1a1">//do something</span>
+    <span style="color:#268bd2">}</span>,
+    <span style="color:#a57800">animationComplete</span> : <span style="color:#268bd2">function</span>(toIndex)<span style="color:#268bd2">{</span>
+        <span style="color:#93a1a1">//do something</span>
+    <span style="color:#268bd2">}</span>
+<span style="color:#268bd2">}</span><span style="color:#93a1a1">)</span>;
+</pre>
+             	</div>
+			</div>
+		</div>
+		<div id="footer">
+		<i id="back_to_top" class="gotoup">&uarr;</i>
+			<div id="footer_inner">
+			<ul>
+				<li><a href="mailto:sashamochalin@gmail.com">@</a></li>
+				<li class="middle">© <code class="elemcode gotoup cursorUp">.smSlider()</code>
+				<span class="date">2013 &mdash; ...</span></li>
+				<li class="right">
+					<a class="elemcode" href="https://github.com/sashamochalin/smSlider">GitHub</a>
+				</li>
+			</ul>
+			</div>
+		</div>
+		<!-- Yandex.Metrika counter -->
+		<script type="text/javascript">
+		(function (d, w, c) {
+		    (w[c] = w[c] || []).push(function() {
+		        try {
+		            w.yaCounter22230172 = new Ya.Metrika({id:22230172,
+                    clickmap:true,
+                    trackLinks:true,
+                    accurateTrackBounce:true});
+		        } catch(e) { }
+		    });
+		    var n = d.getElementsByTagName("script")[0],
+		        s = d.createElement("script"),
+		        f = function () { n.parentNode.insertBefore(s, n); };
+		    s.type = "text/javascript";
+		    s.async = true;
+		    s.src = (d.location.protocol == "https:" ? "https:" : "http:") + "//mc.yandex.ru/metrika/watch.js";
+
+		    if (w.opera == "[object Opera]") {
+		        d.addEventListener("DOMContentLoaded", f, false);
+		    } else { f(); }
+		})(document, window, "yandex_metrika_callbacks");
+		</script>
+		<noscript><div><img src="//mc.yandex.ru/watch/22230172" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+		<!-- /Yandex.Metrika counter -->
+		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script><script type="text/javascript" src="sm/$/jquery.easing-1.3.pack.js"></script><!--[if lte IE 8]><script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]--><script type="text/javascript" src="smSlider/jquery.smslider.min.js"></script><script type="text/javascript" src="sm/$/sm.js"></script>
+	</body>
+</html>

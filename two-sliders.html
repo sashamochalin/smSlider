@@ -1,0 +1,91 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title>.smSlider()</title>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=EmulateIE7, IE=9" />
+		<meta property="og:title" content=".smSlider()">
+		<meta property="og:description" content="smSlider — слайдер для веба ~ 3 kb">
+		<meta property="og:url" content="http://sashamochalin.github.io/smSlider/">
+		<meta property="og:image" content="http://sashamochalin.github.io/smSlider/smSlider.jpg">
+		<link rel="icon" href="http://sashamochalin.github.io/smSlider/favicon.ico" type="image/x-icon" />
+		<link rel="shortcut icon" href="http://sashamochalin.github.io/smSlider/favicon.ico" type="image/x-icon" />
+		<link rel="stylesheet" type="text/css" href="sm/css/demo.css" />
+		<link rel="stylesheet" type="text/css" href="sm/css/sm.css" />
+		<link rel="stylesheet" type="text/css" href="smSlider/css/smslider.css" />
+	</head>
+	<body>
+		<a href="index.html" style="position: relative; top: -40px; left: 25px;">&larr; .smSlider()</a>
+		<div id="two-subMenu">
+			<a href="#" class="sm_submenu-item" data-index="0">первый</a>
+			<a href="#" class="sm_submenu-item" data-index="1">второй</a>
+			<a href="#" class="sm_submenu-item" data-index="2">третий</a>
+			<a href="#" class="sm_submenu-item" data-index="3">четвертый</a>
+			<a href="#" class="sm_submenu-item" data-index="4">пятый</a>
+		</div>
+		<div id="first-slider">
+			<ul>
+				<li style="background:NavajoWhite">1</li>
+				<li style="background:MintCream">2</li>
+				<li style="background:SmokeWhite">3</li>
+				<li style="background:lightYellow">4</li>
+				<li style="background:lightSalmon">5</li>
+			</ul>
+		</div>
+		<div id="second-slider">
+			<ul>
+				<li style="background:Lavender">1</li>
+				<li style="background:Beige">2</li>
+				<li style="background:Azure">3</li>
+				<li style="background:Bisque">4</li>
+				<li style="background:FloralWhite">5</li>
+			</ul>
+		</div>
+		<!-- Yandex.Metrika counter -->
+		<script type="text/javascript">
+		(function (d, w, c) {
+		    (w[c] = w[c] || []).push(function() {
+		        try {
+		            w.yaCounter22230172 = new Ya.Metrika({id:22230172,
+                    clickmap:true,
+                    trackLinks:true,
+                    accurateTrackBounce:true});
+		        } catch(e) { }
+		    });
+		    var n = d.getElementsByTagName("script")[0],
+		        s = d.createElement("script"),
+		        f = function () { n.parentNode.insertBefore(s, n); };
+		    s.type = "text/javascript";
+		    s.async = true;
+		    s.src = (d.location.protocol == "https:" ? "https:" : "http:") + "//mc.yandex.ru/metrika/watch.js";
+
+		    if (w.opera == "[object Opera]") {
+		        d.addEventListener("DOMContentLoaded", f, false);
+		    } else { f(); }
+		})(document, window, "yandex_metrika_callbacks");
+		</script>
+		<noscript><div><img src="//mc.yandex.ru/watch/22230172" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+		<!-- /Yandex.Metrika counter -->
+		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+		<script type="text/javascript" src="smSlider/jquery.smslider.min.js"></script>
+		<script type="text/javascript">
+		$(document).ready(function(){
+		    var $fSlider = $('#first-slider');
+		    var $sSlider = $('#second-slider');
+		    $fSlider.smSlider({
+		    	start : 2,
+		    	subMenu : true,
+		    	typeCtrl : 'numeric',
+		    	prev : 'sm_prev',
+		    	next : 'sm_next'
+		    });
+		    $sSlider.smSlider({
+		    	start : 4,
+		    	subMenu : true,
+		    	prev : 'sm_prev',
+		    	next : 'sm_next'
+		    });
+		});
+		</script>
+	</body>
+</html>

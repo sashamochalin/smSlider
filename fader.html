@@ -1,0 +1,78 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title>.smSlider()</title>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=EmulateIE7, IE=9" />
+		<meta property="og:title" content=".smSlider()">
+		<meta property="og:description" content="smSlider — слайдер для веба ~ 3 kb">
+		<meta property="og:url" content="http://sashamochalin.github.io/smSlider/">
+		<meta property="og:image" content="http://sashamochalin.github.io/smSlider/smSlider.jpg">
+		<link rel="icon" href="http://sashamochalin.github.io/smSlider/favicon.ico" type="image/x-icon" />
+		<link rel="shortcut icon" href="http://sashamochalin.github.io/smSlider/favicon.ico" type="image/x-icon" />
+		<link rel="stylesheet" type="text/css" href="sm/css/demo.css" />
+		<link rel="stylesheet" type="text/css" href="sm/css/sm.css" />
+		<link rel="stylesheet" type="text/css" href="smSlider/css/smslider.css" />
+	</head>
+	<body>
+		<a href="index.html" style="position: relative; top: -40px; left: 25px;">&larr;.smSlider()</a>
+		<div id="fader-demo">			
+			<div id="iphone">
+				<ul>
+					<li>
+						<img class="sm_iphone-screen" data-index="1" src="sm/img/stuff/fader/pic1.jpg" />
+					</li>
+					<li>
+						<img class="sm_iphone-screen" data-index="2" src="sm/img/stuff/fader/pic2.jpg" />
+					</li>
+					<li>
+						<img class="sm_iphone-screen" data-index="0" src="sm/img/stuff/fader/pic3.jpg" />
+					</li>
+				</ul>
+			</div>
+		</div>
+		</div>
+		<!-- Yandex.Metrika counter -->
+		<script type="text/javascript">
+		(function (d, w, c) {
+		    (w[c] = w[c] || []).push(function() {
+		        try {
+		            w.yaCounter22230172 = new Ya.Metrika({id:22230172,
+                    clickmap:true,
+                    trackLinks:true,
+                    accurateTrackBounce:true});
+		        } catch(e) { }
+		    });
+		    var n = d.getElementsByTagName("script")[0],
+		        s = d.createElement("script"),
+		        f = function () { n.parentNode.insertBefore(s, n); };
+		    s.type = "text/javascript";
+		    s.async = true;
+		    s.src = (d.location.protocol == "https:" ? "https:" : "http:") + "//mc.yandex.ru/metrika/watch.js";
+
+		    if (w.opera == "[object Opera]") {
+		        d.addEventListener("DOMContentLoaded", f, false);
+		    } else { f(); }
+		})(document, window, "yandex_metrika_callbacks");
+		</script>
+		<noscript><div><img src="//mc.yandex.ru/watch/22230172" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+		<!-- /Yandex.Metrika counter -->
+		
+		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+		<script type="text/javascript" src="smSlider/jquery.smslider.min.js"></script>
+		<script type="text/javascript">
+		$(document).ready(function(){
+		    var $iPhone = $('#iphone');
+		    $iPhone.smSlider({
+		    	autoArr    : true,
+		    	children   : 'iphone-screen',
+     	        innerBlock : 'iphone-inner',
+     	        //autoPlay   : true,
+     	        transition : 'fader',
+     	        subMenu    : true,
+     	        subMenuClass : 'sm_iphone-screen'
+		    });
+		});
+		</script>
+	</body>
+</html>

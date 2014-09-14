@@ -1,0 +1,105 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title>Full page example .smSlider()</title>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=EmulateIE7, IE=9" />
+		<meta property="og:title" content=".smSlider()">
+		<meta property="og:description" content="smSlider — слайдер для веба ~ 3 kb">
+		<meta property="og:url" content="http://sashamochalin.github.io/smSlider/">
+		<meta property="og:image" content="http://sashamochalin.github.io/smSlider/smSlider.jpg">
+		<link rel="icon" href="http://sashamochalin.github.io/smSlider/favicon.ico" type="image/x-icon" />
+		<link rel="shortcut icon" href="http://sashamochalin.github.io/smSlider/favicon.ico" type="image/x-icon" />
+		<link rel="stylesheet" type="text/css" href="sm/css/sm.css" />
+		<link rel="stylesheet" type="text/css" href="sm/css/demo.css" />
+		<link rel="stylesheet" type="text/css" href="smSlider/css/smslider.css" />
+	</head>
+	<body id="full-page-example">
+		<div id="demo-full-page">
+				<div class="logo big">
+					<a href="index.html"><img src="sm/img/logo.png" /></a>
+				</div>
+				<div id="full-page_slider">
+					<ul>
+						<li>
+							<img src="sm/img/stuff/full-page/pic0.jpg" />
+						</li>
+						<li>
+							<img src="sm/img/stuff/full-page/pic1.jpg" />
+						</li>
+						<li>
+							<img src="sm/img/stuff/full-page/pic2.jpg" />
+						</li>
+						<li>
+							<img src="sm/img/stuff/full-page/pic3.jpg" />
+						</li>
+						<li>
+							<img src="sm/img/stuff/full-page/pic4.jpg" />
+						</li>
+					</ul>
+				</div>
+				<div id="sm_submenu">
+					<div class="sm_submenu-item" data-index="0">
+						<img src="sm/img/stuff/full-page/pics0.jpg" /><span class="year">1935</span>
+						<div class="sm_submenu-description">Археологический отголосок «Анжелюса» Милле</div>
+					</div>
+					<div class="sm_submenu-item" data-index="1">
+						<img src="sm/img/stuff/full-page/pics1.jpg" /><span class="year">1931</span>
+						<div class="sm_submenu-description">Постоянство памяти</div>
+					</div>
+					<div class="sm_submenu-item" data-index="2">
+						<img src="sm/img/stuff/full-page/pics2.jpg" /><span class="year">1937</span>
+						<div class="sm_submenu-description">Сон</div>
+					</div>
+					<div class="sm_submenu-item" data-index="3">
+						<img src="sm/img/stuff/full-page/pics3.jpg" /><span class="year">1933</span>
+						<div class="sm_submenu-description">Двуколка-привидение</div>
+					</div>
+					<div class="sm_submenu-item last" data-index="4">
+						<img src="sm/img/stuff/full-page/pics4.jpg" /><span class="year">1938</span>
+						<div class="sm_submenu-description">Явление лица и вазы с фруктами на берегу моря</div>
+					</div>
+				</div>
+				<p id="full-page_phrase">— например, несколько сюрреализмов Сальвадора Дали. ©</p>
+		</div>
+		<!-- Yandex.Metrika counter -->
+		<script type="text/javascript">
+		(function (d, w, c) {
+		    (w[c] = w[c] || []).push(function() {
+		        try {
+		            w.yaCounter22230172 = new Ya.Metrika({id:22230172,
+                    clickmap:true,
+                    trackLinks:true,
+                    accurateTrackBounce:true});
+		        } catch(e) { }
+		    });
+		    var n = d.getElementsByTagName("script")[0],
+		        s = d.createElement("script"),
+		        f = function () { n.parentNode.insertBefore(s, n); };
+		    s.type = "text/javascript";
+		    s.async = true;
+		    s.src = (d.location.protocol == "https:" ? "https:" : "http:") + "//mc.yandex.ru/metrika/watch.js";
+
+		    if (w.opera == "[object Opera]") {
+		        d.addEventListener("DOMContentLoaded", f, false);
+		    } else { f(); }
+		})(document, window, "yandex_metrika_callbacks");
+		</script>
+		<noscript><div><img src="//mc.yandex.ru/watch/22230172" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+		<!-- /Yandex.Metrika counter -->
+		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+		<script type="text/javascript" src="sm/$/html5shiv.js"></script>
+		<script type="text/javascript" src="smSlider/jquery.smslider.min.js"></script>
+		<script type="text/javascript">
+			$(document).ready(function(){
+				var $smSlider = $('#full-page_slider');
+
+				$smSlider.smSlider({
+					pagination : false,
+					subMenu    : true,
+					flexible   : true
+				})
+			});
+		</script>
+	</body>
+</html>
