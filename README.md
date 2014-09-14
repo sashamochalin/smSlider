@@ -11,7 +11,7 @@ $ git clone git@github.com:sashamochalin/smSlider.git ./smslider/
 * Include scripts and styles:
 
 ``` html
-<link type="text/css"  rel="stylesheet" href="smslider/smslider.css" />
+<link type="text/css"  rel="stylesheet" href="smslider/css/smslider.css" />
 <script type="text/javascript" src="http://code.jquery.com/jquery-latest.min.js"></script>
 <script type="text/javascript" src="smslider/jquery.smslider.min.js"></script>
 ```		
@@ -45,6 +45,14 @@ $ git clone git@github.com:sashamochalin/smSlider.git ./smslider/
 - [Two sliders on one page](http://sashamochalin.github.io/smSlider/two-sliders.html)
 		
 ## Options and Methods
+- namespace `string`
+
+``` javascript
+    // name of prefix:
+        $elem.smSlider({		
+            namespace : 'sm'   		
+    });
+```
 - start `number`
 
 ``` javascript
