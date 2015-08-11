@@ -6,20 +6,22 @@
  */
 (function( $ ){
   $.fn.smSlider = function(options) {
+
+  var namespace = options.namespace || "sm";
+
   var defaults = {
-        namespace         : 'sm',
         start             : 0,
         transition        : 'animate',
         activeClass       : 'active',
         autoArr           : true,
-        innerBlock        : this.namespace+'_slider-inner',
-        prev              : this.namespace+'_prev',
-        next              : this.namespace+'_next',
-        children          : this.namespace+'_slide',
+        innerBlock        : namespace+'_slider-inner',
+        prev              : namespace+'_prev',
+        next              : namespace+'_next',
+        children          : namespace+'_slide',
         pagination        : true,
         typeCtrl          : 'dots',
         subMenu           : false,
-        subMenuClass      : this.namespace+'_submenu-item',
+        subMenuClass      : namespace+'_submenu-item',
         autoPlay          : false,
         delay             : 5000,
         hoverPause        : true,
